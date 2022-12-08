@@ -1,0 +1,68 @@
+# 2022-12-07T23:26:43.803Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "MainActivityTest2"
+    test_package: "com.taskmastermdt.activities"
+    test_method: "mainActivityTest2"
+    start_time {
+      seconds: 1670455599
+      nanos: 448000000
+    }
+    end_time {
+      seconds: 1670455603
+      nanos: 395000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.taskmastermdt.activities.MainActivityTest2-mainActivityTest2.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
