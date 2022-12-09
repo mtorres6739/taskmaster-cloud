@@ -1,0 +1,46 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateTaskList(
+  $input: CreateTaskListInput!
+  $condition: ModelTaskListConditionInput
+) {
+  createTaskList(input: $input, condition: $condition) {
+    id
+    name
+    description
+    type
+    dateCreated
+    difficulty
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateTaskList(
+  $input: UpdateTaskListInput!
+  $condition: ModelTaskListConditionInput
+) {
+  updateTaskList(input: $input, condition: $condition) {
+    id
+    name
+    description
+    type
+    dateCreated
+    difficulty
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteTaskList(
+  $input: DeleteTaskListInput!
+  $condition: ModelTaskListConditionInput
+) {
+  deleteTaskList(input: $input, condition: $condition) {
+    id
+    name
+    description
+    type
+    dateCreated
+    difficulty
+    createdAt
+    updatedAt
+  }
+}

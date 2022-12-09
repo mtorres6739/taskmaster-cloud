@@ -10,12 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amplifyframework.datastore.generated.model.TaskList;
 import com.taskmastermdt.R;
 import com.taskmastermdt.activities.MainActivity;
 import com.taskmastermdt.activities.TaskDetail;
-import com.taskmastermdt.models.TaskList;
 
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 public class TaskListRecyclerViewAdapter extends RecyclerView.Adapter<TaskListRecyclerViewAdapter.TaskListViewHolder> {
     List<TaskList> taskListList;
@@ -35,15 +39,22 @@ public class TaskListRecyclerViewAdapter extends RecyclerView.Adapter<TaskListRe
 
     @Override
     public void onBindViewHolder(@NonNull TaskListViewHolder holder, int position) {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMMM dd, yyyy");
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        String temporalDateTime = simpleDateFormat.format(new Date());
+
         TextView taskListFragmentTextViewName = holder.itemView.findViewById(R.id.TaskListTextViewTaskName);
         TaskList taskList = taskListList.get(position);
         taskListFragmentTextViewName.setText((position + 1) + ". " + taskList.getName());
 
         TextView taskListFragmentTextViewBody = holder.itemView.findViewById(R.id.TaskListTextViewTaskBody);
-        taskListFragmentTextViewBody.setText(taskList.getBody() + "\n" + "\n" + "Date Created: " + taskList.getDateCreated());
+//        taskListFragmentTextViewBody.setText(taskList.getDescription() + "\n" + "\n" + "Date Created: " + taskList.getDateCreated());
+        taskListFragmentTextViewBody.setText(taskList.getDescription() + "\n" + "\n" + "Date Created: " + temporalDateTime);
+
 
         TextView taskListFragmentTextViewStatus = holder.itemView.findViewById(R.id.TaskListTextViewTaskStatus);
-        taskListFragmentTextViewStatus.setText(taskList.getStatus() + "\n" + "Difficulty: " + taskList.getDifficulty());
+        taskListFragmentTextViewStatus.setText(taskList.getType() + "\n" + "Difficulty: " + taskList.getDifficulty());
 
         View taskListItemView = holder.itemView;
         taskListItemView.setOnClickListener(view -> {
