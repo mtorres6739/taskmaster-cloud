@@ -14,6 +14,15 @@ TaskMaster is a simple android app that allows you to manage your tasks.
 
 ## Change Log
 
+### 1.0.4
+
+- Removed room database from the project
+- Added a DynamoDB database to the project
+- Inegrated AWS Amplify into the project
+- Updated the Task Model class to use the DynamoDB database
+- Added TaskList schema to the project
+
+
 ### 1.0.3
 
 - Added a difficulty text edit field to the Add Task screen

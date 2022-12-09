@@ -1,11 +1,11 @@
 package com.taskmastermdt.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.room.Room;
+
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,15 +13,18 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+import com.amplifyframework.api.graphql.model.ModelMutation;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.core.model.temporal.Temporal;
+import com.amplifyframework.datastore.generated.model.TaskList;
+import com.amplifyframework.datastore.generated.model.TaskListStatusTypeEnum;
 import com.taskmastermdt.R;
-import com.taskmastermdt.database.TaskmasterMDTDatabase;
-import com.taskmastermdt.models.TaskList;
 
 import java.util.Date;
 
 public class AddTask extends AppCompatActivity {
+    public final static String TAG = "AddTaskActivity";
 
-    TaskmasterMDTDatabase taskmasterMDTDatabase;
     Spinner taskListStatusTypeSpinner;
 
 
@@ -31,13 +34,6 @@ public class AddTask extends AppCompatActivity {
         setContentView(R.layout.activity_add_task);
         taskListStatusTypeSpinner = findViewById(R.id.AddTaskSpinnerStatus);
 
-        taskmasterMDTDatabase = Room.databaseBuilder(
-                        getApplicationContext(),
-                        TaskmasterMDTDatabase.class,
-                        MainActivity.DATABASE_NAME)
-                .fallbackToDestructiveMigration()
-                .allowMainThreadQueries()
-                .build();
 
         setupTaskListStatusTypeSpinner();
         backBtn();
@@ -49,7 +45,7 @@ public class AddTask extends AppCompatActivity {
         taskListStatusTypeSpinner.setAdapter(new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
-                TaskList.TaskListStatusTypeEnum.values()
+                TaskListStatusTypeEnum.values()
         ));
     }
 
@@ -64,14 +60,22 @@ public class AddTask extends AppCompatActivity {
     public void setupAddTaskBtn() {
         Button addTaskBtn = findViewById(R.id.AddTaskBtnAddTask);
         addTaskBtn.setOnClickListener(view -> {
-            TaskList newTaskListItem = new TaskList(
-                    ((EditText) findViewById(R.id.AddTaskPlanTextEditMyTaskTitle)).getText().toString(),
-                    ((EditText) findViewById(R.id.AddTaskTextEditTaskDescription)).getText().toString(),
-                    TaskList.TaskListStatusTypeEnum.fromString(taskListStatusTypeSpinner.getSelectedItem().toString()),
-                    new Date(),
-                    Integer.parseInt(((EditText) findViewById(R.id.AddTaskTextEditDifficulty)).getText().toString())
+
+            TaskList newTaskListItem = TaskList.builder()
+                    .name(((EditText) findViewById(R.id.AddTaskPlanTextEditMyTaskTitle)).getText().toString())
+                    .description(((EditText) findViewById(R.id.AddTaskTextEditTaskDescription)).getText().toString())
+                    .type((TaskListStatusTypeEnum)taskListStatusTypeSpinner.getSelectedItem())
+                    .dateCreated(new Temporal.DateTime(new Date(), 0))
+                    .difficulty(Integer.parseInt(((EditText) findViewById(R.id.AddTaskTextEditDifficulty)).getText().toString()))
+                    .build();
+
+            Amplify.API.mutate(
+                    ModelMutation.create(newTaskListItem),
+                    successResponse -> Log.i(TAG, "AddTaskActivity.onCreate(): made a task item successfully!"),
+                    failureResponse -> Log.w(TAG, "Failed to make a task item.", failureResponse)
             );
-            taskmasterMDTDatabase.taskListDao().insertTask(newTaskListItem);
+
+
             Toast.makeText(this, "Task Added to the List!", Toast.LENGTH_SHORT).show();
         });
     }
