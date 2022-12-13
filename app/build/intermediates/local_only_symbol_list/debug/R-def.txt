@@ -17,10 +17,12 @@ id AddTaskBtnAddTask
 id AddTaskBtnBack
 id AddTaskPlanTextEditMyTaskTitle
 id AddTaskSpinnerStatus
+id AddTaskSpinnerSuperTeam
 id AddTaskTextEditDifficulty
 id AddTaskTextEditTaskDescription
 id AddTaskTextViewDifficulty
 id AddTaskTextViewStatus
+id AddTaskTextViewSuperTeam
 id AddTaskTextViewTaskTitle
 id AddTaskTextViewTextDescription
 id AddTaskTextViewTotalTasks
@@ -34,9 +36,12 @@ id MainActivityImgBtnSettings
 id MainActivityRecyclerViewTaskList
 id MainActivityTextViewMyTasks
 id MainActivityTextViewUsernameTasks
+id SettingSpinnerSelectTeam
+id SettingTextViewSelectTeam
 id SettingsBtnBack
 id SettingsBtnSave
 id SettingsTextEditUsername
+id SettingsTextViewEnterUsername
 id SettingsTextViewSettings
 id TaskDetailBtnBack
 id TaskDetailTextViewTaskDetails

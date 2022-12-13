@@ -2558,10 +2558,12 @@ id AddTaskBtnAddTask
 id AddTaskBtnBack
 id AddTaskPlanTextEditMyTaskTitle
 id AddTaskSpinnerStatus
+id AddTaskSpinnerSuperTeam
 id AddTaskTextEditDifficulty
 id AddTaskTextEditTaskDescription
 id AddTaskTextViewDifficulty
 id AddTaskTextViewStatus
+id AddTaskTextViewSuperTeam
 id AddTaskTextViewTaskTitle
 id AddTaskTextViewTextDescription
 id AddTaskTextViewTotalTasks
@@ -2586,9 +2588,12 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id SettingSpinnerSelectTeam
+id SettingTextViewSelectTeam
 id SettingsBtnBack
 id SettingsBtnSave
 id SettingsTextEditUsername
+id SettingsTextViewEnterUsername
 id SettingsTextViewSettings
 id TOP_END
 id TOP_START

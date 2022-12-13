@@ -1,4 +1,82 @@
 # this is an auto generated file. This will be overwritten
+mutation CreateSuperTeam(
+  $input: CreateSuperTeamInput!
+  $condition: ModelSuperTeamConditionInput
+) {
+  createSuperTeam(input: $input, condition: $condition) {
+    id
+    name
+    email
+    taskLists {
+      items {
+        id
+        name
+        superTeamId
+        description
+        type
+        dateCreated
+        difficulty
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateSuperTeam(
+  $input: UpdateSuperTeamInput!
+  $condition: ModelSuperTeamConditionInput
+) {
+  updateSuperTeam(input: $input, condition: $condition) {
+    id
+    name
+    email
+    taskLists {
+      items {
+        id
+        name
+        superTeamId
+        description
+        type
+        dateCreated
+        difficulty
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteSuperTeam(
+  $input: DeleteSuperTeamInput!
+  $condition: ModelSuperTeamConditionInput
+) {
+  deleteSuperTeam(input: $input, condition: $condition) {
+    id
+    name
+    email
+    taskLists {
+      items {
+        id
+        name
+        superTeamId
+        description
+        type
+        dateCreated
+        difficulty
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
 mutation CreateTaskList(
   $input: CreateTaskListInput!
   $condition: ModelTaskListConditionInput
@@ -6,10 +84,21 @@ mutation CreateTaskList(
   createTaskList(input: $input, condition: $condition) {
     id
     name
+    superTeamId
     description
     type
     dateCreated
     difficulty
+    superTeam {
+      id
+      name
+      email
+      taskLists {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }
@@ -21,10 +110,21 @@ mutation UpdateTaskList(
   updateTaskList(input: $input, condition: $condition) {
     id
     name
+    superTeamId
     description
     type
     dateCreated
     difficulty
+    superTeam {
+      id
+      name
+      email
+      taskLists {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }
@@ -36,10 +136,21 @@ mutation DeleteTaskList(
   deleteTaskList(input: $input, condition: $condition) {
     id
     name
+    superTeamId
     description
     type
     dateCreated
     difficulty
+    superTeam {
+      id
+      name
+      email
+      taskLists {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }

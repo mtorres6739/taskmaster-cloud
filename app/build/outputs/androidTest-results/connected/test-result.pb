@@ -1,20 +1,20 @@
 
-Œ
-`
-MainActivityTest2com.taskmastermdt.activitiesmainActivityTest22Ø¬ƒúÄ‡œ’:≥¬ƒú¿Ò¨º"·
+ä
+r
+MainActivityTest2_12_12_22com.taskmastermdt.activitiesmainActivityTest2_12_12_222ÈÌﬂúÄô§ä:ÎÌﬂúÄ…á∏"˘
 
-logcatandroidÀ
-»/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.taskmastermdt.activities.MainActivityTest2-mainActivityTest2.txt"©
+logcatandroid„
+‡/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.taskmastermdt.activities.MainActivityTest2_12_12_22-mainActivityTest2_12_12_22.txt"Ø
 
-device-infoandroidé
-ã/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"™
+device-infoandroidî
+ë/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"∞
 
-device-info.meminfoandroidá
-Ñ/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"™
+device-info.meminfoandroidç
+ä/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"∞
 
-device-info.cpuinfoandroidá
-Ñ/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo*é
+device-info.cpuinfoandroidç
+ä/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo*î
 c
-test-results.logOcom.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriverò
-ï/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/testlog/test-results.log 2
+test-results.logOcom.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriverû
+õ/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/testlog/test-results.log 2
 text/plain

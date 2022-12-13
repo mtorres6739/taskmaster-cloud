@@ -1,20 +1,20 @@
-# 2022-12-07T23:26:43.803Z:
+# 2022-12-13T03:52:11.720Z:
 test_suite_meta_data {
   scheduled_test_case_count: 1
 }
 test_status: PASSED
 test_result {
   test_case {
-    test_class: "MainActivityTest2"
+    test_class: "MainActivityTest2_12_12_22"
     test_package: "com.taskmastermdt.activities"
-    test_method: "mainActivityTest2"
+    test_method: "mainActivityTest2_12_12_22"
     start_time {
-      seconds: 1670455599
-      nanos: 448000000
+      seconds: 1670903529
+      nanos: 290000000
     }
     end_time {
-      seconds: 1670455603
-      nanos: 395000000
+      seconds: 1670903531
+      nanos: 386000000
     }
   }
   test_status: PASSED
@@ -24,7 +24,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.taskmastermdt.activities.MainActivityTest2-mainActivityTest2.txt"
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.taskmastermdt.activities.MainActivityTest2_12_12_22-mainActivityTest2_12_12_22.txt"
     }
   }
   output_artifact {
@@ -33,7 +33,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"
     }
   }
   output_artifact {
@@ -42,7 +42,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"
     }
   }
   output_artifact {
@@ -51,7 +51,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo"
+      path: "/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo"
     }
   }
 }
@@ -61,7 +61,7 @@ output_artifact {
     namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
   }
   source_path {
-    path: "/Users/mathewtorres/projects/courses/401/taskmaster/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/testlog/test-results.log"
+    path: "/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/testlog/test-results.log"
   }
   type: TEST_DATA
   mime_type: "text/plain"

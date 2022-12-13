@@ -106,10 +106,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:text="Add Task"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/AddTaskSpinnerStatus" />
+            app:layout_constraintTop_toBottomOf="@+id/AddTaskSpinnerSuperTeam" />
 
         <TextView
             android:id="@+id/AddTaskTextViewTextDescription"
@@ -139,6 +139,25 @@
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AddTaskTextViewStatus" />
+
+        <Spinner
+            android:id="@+id/AddTaskSpinnerSuperTeam"
+            android:layout_width="355dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddTaskTextViewSuperTeam" />
+
+        <TextView
+            android:id="@+id/AddTaskTextViewSuperTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Team"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddTaskSpinnerStatus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
