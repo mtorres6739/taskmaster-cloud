@@ -1,6 +1,7 @@
 package com.amplifyframework.datastore.generated.model;
 
 import com.amplifyframework.core.model.temporal.Temporal;
+import com.amplifyframework.core.model.annotations.BelongsTo;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,6 +25,7 @@ import static com.amplifyframework.core.model.query.predicate.QueryField.field;
 @ModelConfig(pluralName = "TaskLists", type = Model.Type.USER, version = 1, authRules = {
   @AuthRule(allow = AuthStrategy.PUBLIC, operations = { ModelOperation.CREATE, ModelOperation.UPDATE, ModelOperation.DELETE, ModelOperation.READ })
 })
+@Index(name = "byTeams", fields = {"superTeamId","name"})
 public final class TaskList implements Model {
   public static final QueryField ID = field("TaskList", "id");
   public static final QueryField NAME = field("TaskList", "name");
@@ -31,12 +33,14 @@ public final class TaskList implements Model {
   public static final QueryField TYPE = field("TaskList", "type");
   public static final QueryField DATE_CREATED = field("TaskList", "dateCreated");
   public static final QueryField DIFFICULTY = field("TaskList", "difficulty");
+  public static final QueryField SUPER_TEAM = field("TaskList", "superTeamId");
   private final @ModelField(targetType="ID", isRequired = true) String id;
   private final @ModelField(targetType="String", isRequired = true) String name;
   private final @ModelField(targetType="String") String description;
   private final @ModelField(targetType="TaskListStatusTypeEnum") TaskListStatusTypeEnum type;
   private final @ModelField(targetType="AWSDateTime") Temporal.DateTime dateCreated;
   private final @ModelField(targetType="Int") Integer difficulty;
+  private final @ModelField(targetType="SuperTeam") @BelongsTo(targetName = "superTeamId", targetNames = {"superTeamId"}, type = SuperTeam.class) SuperTeam superTeam;
   private @ModelField(targetType="AWSDateTime", isReadOnly = true) Temporal.DateTime createdAt;
   private @ModelField(targetType="AWSDateTime", isReadOnly = true) Temporal.DateTime updatedAt;
   public String resolveIdentifier() {
@@ -67,6 +71,10 @@ public final class TaskList implements Model {
       return difficulty;
   }
   
+  public SuperTeam getSuperTeam() {
+      return superTeam;
+  }
+  
   public Temporal.DateTime getCreatedAt() {
       return createdAt;
   }
@@ -75,13 +83,14 @@ public final class TaskList implements Model {
       return updatedAt;
   }
   
-  private TaskList(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty) {
+  private TaskList(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty, SuperTeam superTeam) {
     this.id = id;
     this.name = name;
     this.description = description;
     this.type = type;
     this.dateCreated = dateCreated;
     this.difficulty = difficulty;
+    this.superTeam = superTeam;
   }
   
   @Override
@@ -98,6 +107,7 @@ public final class TaskList implements Model {
               ObjectsCompat.equals(getType(), taskList.getType()) &&
               ObjectsCompat.equals(getDateCreated(), taskList.getDateCreated()) &&
               ObjectsCompat.equals(getDifficulty(), taskList.getDifficulty()) &&
+              ObjectsCompat.equals(getSuperTeam(), taskList.getSuperTeam()) &&
               ObjectsCompat.equals(getCreatedAt(), taskList.getCreatedAt()) &&
               ObjectsCompat.equals(getUpdatedAt(), taskList.getUpdatedAt());
       }
@@ -112,6 +122,7 @@ public final class TaskList implements Model {
       .append(getType())
       .append(getDateCreated())
       .append(getDifficulty())
+      .append(getSuperTeam())
       .append(getCreatedAt())
       .append(getUpdatedAt())
       .toString()
@@ -128,6 +139,7 @@ public final class TaskList implements Model {
       .append("type=" + String.valueOf(getType()) + ", ")
       .append("dateCreated=" + String.valueOf(getDateCreated()) + ", ")
       .append("difficulty=" + String.valueOf(getDifficulty()) + ", ")
+      .append("superTeam=" + String.valueOf(getSuperTeam()) + ", ")
       .append("createdAt=" + String.valueOf(getCreatedAt()) + ", ")
       .append("updatedAt=" + String.valueOf(getUpdatedAt()))
       .append("}")
@@ -153,6 +165,7 @@ public final class TaskList implements Model {
       null,
       null,
       null,
+      null,
       null
     );
   }
@@ -163,7 +176,8 @@ public final class TaskList implements Model {
       description,
       type,
       dateCreated,
-      difficulty);
+      difficulty,
+      superTeam);
   }
   public interface NameStep {
     BuildStep name(String name);
@@ -177,6 +191,7 @@ public final class TaskList implements Model {
     BuildStep type(TaskListStatusTypeEnum type);
     BuildStep dateCreated(Temporal.DateTime dateCreated);
     BuildStep difficulty(Integer difficulty);
+    BuildStep superTeam(SuperTeam superTeam);
   }
   
 
@@ -187,6 +202,7 @@ public final class TaskList implements Model {
     private TaskListStatusTypeEnum type;
     private Temporal.DateTime dateCreated;
     private Integer difficulty;
+    private SuperTeam superTeam;
     @Override
      public TaskList build() {
         String id = this.id != null ? this.id : UUID.randomUUID().toString();
@@ -197,7 +213,8 @@ public final class TaskList implements Model {
           description,
           type,
           dateCreated,
-          difficulty);
+          difficulty,
+          superTeam);
     }
     
     @Override
@@ -231,6 +248,12 @@ public final class TaskList implements Model {
         return this;
     }
     
+    @Override
+     public BuildStep superTeam(SuperTeam superTeam) {
+        this.superTeam = superTeam;
+        return this;
+    }
+    
     /**
      * @param id id
      * @return Current Builder instance, for fluent method chaining
@@ -243,13 +266,14 @@ public final class TaskList implements Model {
   
 
   public final class CopyOfBuilder extends Builder {
-    private CopyOfBuilder(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty) {
+    private CopyOfBuilder(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty, SuperTeam superTeam) {
       super.id(id);
       super.name(name)
         .description(description)
         .type(type)
         .dateCreated(dateCreated)
-        .difficulty(difficulty);
+        .difficulty(difficulty)
+        .superTeam(superTeam);
     }
     
     @Override
@@ -275,6 +299,11 @@ public final class TaskList implements Model {
     @Override
      public CopyOfBuilder difficulty(Integer difficulty) {
       return (CopyOfBuilder) super.difficulty(difficulty);
+    }
+    
+    @Override
+     public CopyOfBuilder superTeam(SuperTeam superTeam) {
+      return (CopyOfBuilder) super.superTeam(superTeam);
     }
   }
   

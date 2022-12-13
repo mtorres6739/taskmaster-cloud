@@ -1,12 +1,92 @@
 # this is an auto generated file. This will be overwritten
+subscription OnCreateSuperTeam($filter: ModelSubscriptionSuperTeamFilterInput) {
+  onCreateSuperTeam(filter: $filter) {
+    id
+    name
+    email
+    taskLists {
+      items {
+        id
+        name
+        superTeamId
+        description
+        type
+        dateCreated
+        difficulty
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateSuperTeam($filter: ModelSubscriptionSuperTeamFilterInput) {
+  onUpdateSuperTeam(filter: $filter) {
+    id
+    name
+    email
+    taskLists {
+      items {
+        id
+        name
+        superTeamId
+        description
+        type
+        dateCreated
+        difficulty
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteSuperTeam($filter: ModelSubscriptionSuperTeamFilterInput) {
+  onDeleteSuperTeam(filter: $filter) {
+    id
+    name
+    email
+    taskLists {
+      items {
+        id
+        name
+        superTeamId
+        description
+        type
+        dateCreated
+        difficulty
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
 subscription OnCreateTaskList($filter: ModelSubscriptionTaskListFilterInput) {
   onCreateTaskList(filter: $filter) {
     id
     name
+    superTeamId
     description
     type
     dateCreated
     difficulty
+    superTeam {
+      id
+      name
+      email
+      taskLists {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }
@@ -15,10 +95,21 @@ subscription OnUpdateTaskList($filter: ModelSubscriptionTaskListFilterInput) {
   onUpdateTaskList(filter: $filter) {
     id
     name
+    superTeamId
     description
     type
     dateCreated
     difficulty
+    superTeam {
+      id
+      name
+      email
+      taskLists {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }
@@ -27,10 +118,21 @@ subscription OnDeleteTaskList($filter: ModelSubscriptionTaskListFilterInput) {
   onDeleteTaskList(filter: $filter) {
     id
     name
+    superTeamId
     description
     type
     dateCreated
     difficulty
+    superTeam {
+      id
+      name
+      email
+      taskLists {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }

@@ -35,13 +35,17 @@ public class MainActivity extends AppCompatActivity {
     public static final String TASKMASTER_TASK_NAME_TAG = "taskmasterTask";
     public static final String TASKMASTER_TASK_BODY_TAG = "taskmasterTaskBody";
 
+//    List<TaskList> taskListList = new ArrayList<>();
+    SharedPreferences preferences;
+    String usernameString = "";
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
 
         setupRecyclerView();
@@ -55,18 +59,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         setupGreeting();
-        Amplify.API.query(
-                ModelQuery.list(TaskList.class),
-                successResponse -> {
-                    Log.i(TAG, "Read Task List successfully!");
-                    for (TaskList databaseTaskList : successResponse.getData()) {
-                        taskListList.add(databaseTaskList);
-                    }
-                    runOnUiThread(() -> adapter.notifyDataSetChanged());
-
-                },
-                failureResponse -> Log.e(TAG, "Failed to read task list from database.")
-        );
+        setupTaskListFromDatabase();
+        adapter.updateListData(taskListList);
+//        Amplify.API.query(
+//                ModelQuery.list(TaskList.class),
+//                successResponse -> {
+//                    Log.i(TAG, "Read Task List successfully!");
+//                    for (TaskList databaseTaskList : successResponse.getData()) {
+//                        taskListList.add(databaseTaskList);
+//                    }
+//                    runOnUiThread(() -> adapter.notifyDataSetChanged());
+//
+//                },
+//                failureResponse -> Log.e(TAG, "Failed to read task list from database.")
+//        );
 
     }
 
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String username = preferences.getString(Settings.USERNAME_TAG, "No Username");
         ((TextView) findViewById(R.id.MainActivityTextViewUsernameTasks)).setText(username + "'s Tasks");
+
     }
 
     public void setupRecyclerView() {
@@ -116,7 +123,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    private void setupTaskListFromDatabase() {
+        String currentTeam = preferences.getString(Settings.TEAM_TAG, "ALL");
+        taskListList.clear();
+        Amplify.API.query(
+                ModelQuery.list(TaskList.class),
+                success -> {
+                    Log.i(TAG, "Read task list successfully");
+                    for (TaskList databaseTaskList : success.getData()) {
+                        if (currentTeam.equals("ALL") || databaseTaskList.getSuperTeam().getName().equals(currentTeam))
+                            taskListList.add(databaseTaskList);
+                    }
+                    runOnUiThread(() -> adapter.notifyDataSetChanged());
+                },
+                failure -> Log.i(TAG, "Failed to read task list")
+        );
+    }
 
 
 }

@@ -32,26 +32,54 @@
 
     <EditText
         android:id="@+id/SettingsTextEditUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="156dp"
+        android:layout_width="355dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
         android:ems="17"
         android:hint="Username"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SettingsTextViewSettings" />
-
+        app:layout_constraintTop_toBottomOf="@+id/SettingsTextViewEnterUsername" />
 
 
     <Button
         android:id="@+id/SettingsBtnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:text="Save"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingSpinnerSelectTeam" />
+
+    <Spinner
+        android:id="@+id/SettingSpinnerSelectTeam"
+        android:layout_width="355dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingTextViewSelectTeam" />
+
+    <TextView
+        android:id="@+id/SettingTextViewSelectTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Select Team"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SettingsTextEditUsername" />
+
+    <TextView
+        android:id="@+id/SettingsTextViewEnterUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
+        android:text="Set Username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingsTextViewSettings" />
 </androidx.constraintlayout.widget.ConstraintLayout>

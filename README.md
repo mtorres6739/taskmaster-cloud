@@ -14,6 +14,14 @@ TaskMaster is a simple android app that allows you to manage your tasks.
 
 ## Change Log
 
+### 1.0.5
+
+- Added a SuperTeam Model class
+  - Tasks can be assigned to a Team member
+- Updated Add Task screen to allow user to select a Team member
+- Setttings screen now allows user to select a Team member
+- Main Activity recycler view now shows tasks filtered by Team member name that gets selected in settings page
+
 ### 1.0.4
 
 - Removed room database from the project

@@ -28,10 +28,6 @@
         "source": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-main-40:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.taskmastermdt.app-merged_res-38:/raw_amplifyconfiguration.json.flat",
-        "source": "com.taskmastermdt.app-main-40:/raw/amplifyconfiguration.json"
-    },
-    {
         "merged": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-merged_res-38:/drawable_rounded_corners.xml.flat",
         "source": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-main-40:/drawable/rounded_corners.xml"
     },
@@ -100,6 +96,10 @@
         "source": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-main-40:/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "com.taskmastermdt.app-merged_res-38:/layout_activity_settings.xml.flat",
+        "source": "com.taskmastermdt.app-main-40:/layout/activity_settings.xml"
+    },
+    {
         "merged": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-merged_res-38:/layout_activity_settings.xml.flat",
         "source": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-main-40:/layout/activity_settings.xml"
     },
@@ -110,10 +110,6 @@
     {
         "merged": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-merged_res-38:/xml_backup_rules.xml.flat",
         "source": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-main-40:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "com.taskmastermdt.app-merged_res-38:/raw_awsconfiguration.json.flat",
-        "source": "com.taskmastermdt.app-main-40:/raw/awsconfiguration.json"
     },
     {
         "merged": "/Users/mathewtorres/.gradle/daemon/7.4/com.taskmastermdt.app-merged_res-38:/layout_fragment_task_list.xml.flat",
