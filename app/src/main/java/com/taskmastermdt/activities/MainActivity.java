@@ -10,16 +10,22 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.auth.AuthUser;
+import com.amplifyframework.auth.AuthUserAttributeKey;
+import com.amplifyframework.auth.options.AuthSignUpOptions;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.TaskList;
 import com.amplifyframework.datastore.generated.model.TaskListStatusTypeEnum;
 import com.taskmastermdt.R;
+import com.taskmastermdt.activities.auth.SignInActivity;
+import com.taskmastermdt.activities.auth.SignUpActivity;
 import com.taskmastermdt.adapter.TaskListRecyclerViewAdapter;
 
 
@@ -34,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public final static String TAG = "MainActivity";
     public static final String TASKMASTER_TASK_NAME_TAG = "taskmasterTask";
     public static final String TASKMASTER_TASK_BODY_TAG = "taskmasterTaskBody";
+    public AuthUser authUser = null;
 
-//    List<TaskList> taskListList = new ArrayList<>();
     SharedPreferences preferences;
     String usernameString = "";
 
@@ -45,6 +51,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        Amplify.Auth.signUp("torres.mathew@gmail.com", "p@$$word",
+//                AuthSignUpOptions.builder()
+//                        .userAttribute(AuthUserAttributeKey.email(), "torres.mathew@gmail.com")
+//                        .userAttribute(AuthUserAttributeKey.nickname(), "Chewie")
+//                        .build(),
+//                success -> Log.i(TAG, "Signup succeeded" + success.toString()),
+//                failure -> Log.w(TAG, "Sigup failed with email" + "torres.mathew@gmail.com" + "with message " + failure)
+//                );
+//
+//        // Verification
+//        Amplify.Auth.confirmSignUp(
+//                "torres.mathew@gmail.com",
+//                "123456",
+//                success -> Log.i(TAG, "Signup succeeded" + success.toString()),
+//                failure -> Log.w(TAG, "Verification failed: " + failure)
+//
+//        );
+//        // Login
+//        Amplify.Auth.signIn(
+//                'torres.mathew@gmail.com',
+//                "p@$$word",
+//                success -> Log.i(TAG, "SignIn success!"),
+//                failure -> Log.e(TAG, "SignIn failed")
+//        );
+//
+//        // Signout
+//        Amplify.Auth.signOut(
+//                success -> {},
+//                failure -> {}
+//        );
+
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
 
@@ -52,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         addTaskBtn();
         allTasksBtn();
         settingsScreen();
+        setupAuthBtns();
 
     }
 
@@ -138,6 +177,42 @@ public class MainActivity extends AppCompatActivity {
                 },
                 failure -> Log.i(TAG, "Failed to read task list")
         );
+    }
+
+    public void setupAuthBtns() {
+        Button signIn = MainActivity.this.findViewById(R.id.MainActivityBtnSignIn);
+        signIn.setOnClickListener(view -> {
+            Intent goToSignInActivityIntent = new Intent(MainActivity.this, SignInActivity.class);
+            startActivity(goToSignInActivityIntent);
+        });
+        Button signUp = MainActivity.this.findViewById(R.id.MainActivityBtnSignUp);
+        signUp.setOnClickListener(view -> {
+            Intent goToSignUpActivityIntent = new Intent(MainActivity.this, SignUpActivity.class);
+            startActivity(goToSignUpActivityIntent);
+        });
+
+
+
+        Amplify.Auth.getCurrentUser(
+                success -> {
+                    Log.i(TAG, "Success!");
+                    if (authUser == null){
+                        signIn.setVisibility(View.VISIBLE);
+                        signUp.setVisibility(View.VISIBLE);
+                    } else {
+                        String username = authUser.getUsername();
+                        Log.i(TAG, "Username is: " + username);
+                        signIn.setVisibility(View.INVISIBLE);
+                        signUp.setVisibility(View.INVISIBLE);
+                    }
+                },
+                failure -> Log.w(TAG, "Failed to get current user")
+
+        );
+
+
+
+
     }
 
 
