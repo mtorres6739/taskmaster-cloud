@@ -17,6 +17,7 @@ import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.SuperTeam;
 import com.taskmastermdt.R;
+import com.taskmastermdt.activities.auth.SignInActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,5 +98,7 @@ public class Settings extends AppCompatActivity {
             Toast.makeText(Settings.this, "Settings Saved!", Toast.LENGTH_SHORT).show();
         });
     }
+
+ 
 
 }
