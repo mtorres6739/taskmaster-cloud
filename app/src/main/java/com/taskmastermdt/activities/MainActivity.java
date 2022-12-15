@@ -19,6 +19,10 @@ import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.auth.AuthUser;
 import com.amplifyframework.auth.AuthUserAttributeKey;
+import com.amplifyframework.auth.cognito.result.AWSCognitoAuthSignOutResult;
+import com.amplifyframework.auth.cognito.result.GlobalSignOutError;
+import com.amplifyframework.auth.cognito.result.HostedUIError;
+import com.amplifyframework.auth.cognito.result.RevokeTokenError;
 import com.amplifyframework.auth.options.AuthSignUpOptions;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.TaskList;
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String TAG = "MainActivity";
     public static final String TASKMASTER_TASK_NAME_TAG = "taskmasterTask";
     public static final String TASKMASTER_TASK_BODY_TAG = "taskmasterTaskBody";
+    public static final String TASKMASTER_TASK_IMAGE_TAG = "taskmasterTaskImage";
     public AuthUser authUser = null;
 
     SharedPreferences preferences;
@@ -52,36 +57,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Amplify.Auth.signUp("torres.mathew@gmail.com", "p@$$word",
-//                AuthSignUpOptions.builder()
-//                        .userAttribute(AuthUserAttributeKey.email(), "torres.mathew@gmail.com")
-//                        .userAttribute(AuthUserAttributeKey.nickname(), "Chewie")
-//                        .build(),
-//                success -> Log.i(TAG, "Signup succeeded" + success.toString()),
-//                failure -> Log.w(TAG, "Sigup failed with email" + "torres.mathew@gmail.com" + "with message " + failure)
-//                );
-//
-//        // Verification
-//        Amplify.Auth.confirmSignUp(
-//                "torres.mathew@gmail.com",
-//                "123456",
-//                success -> Log.i(TAG, "Signup succeeded" + success.toString()),
-//                failure -> Log.w(TAG, "Verification failed: " + failure)
-//
-//        );
-//        // Login
-//        Amplify.Auth.signIn(
-//                'torres.mathew@gmail.com',
-//                "p@$$word",
-//                success -> Log.i(TAG, "SignIn success!"),
-//                failure -> Log.e(TAG, "SignIn failed")
-//        );
-//
-//        // Signout
-//        Amplify.Auth.signOut(
-//                success -> {},
-//                failure -> {}
-//        );
+        Amplify.Auth.getCurrentUser(
+                success -> {
+                    Log.i(TAG, "Success, there is a user");
+                    authUser = success;
+                },
+                failure -> {
+                    Log.w(TAG, "There is no authenticated user");
+                    authUser = null;
+                }
+        );
+
+
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -92,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         settingsScreen();
         setupAuthBtns();
 
+
     }
 
     @Override
@@ -100,19 +88,7 @@ public class MainActivity extends AppCompatActivity {
         setupGreeting();
         setupTaskListFromDatabase();
         adapter.updateListData(taskListList);
-//        Amplify.API.query(
-//                ModelQuery.list(TaskList.class),
-//                successResponse -> {
-//                    Log.i(TAG, "Read Task List successfully!");
-//                    for (TaskList databaseTaskList : successResponse.getData()) {
-//                        taskListList.add(databaseTaskList);
-//                    }
-//                    runOnUiThread(() -> adapter.notifyDataSetChanged());
-//
-//                },
-//                failureResponse -> Log.e(TAG, "Failed to read task list from database.")
-//        );
-
+        setupHideBtns();
     }
 
     public void setupGreeting() {
@@ -124,11 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void setupRecyclerView() {
         taskListList = new ArrayList<>();
-//        taskListList.add(new TaskList("Take Medication", "Take medication in the following order. Med 1, Med 2, Med 3, Med 4 with food.", TaskListStatusTypeEnum.New, new Date(), 1));
-//        taskListList.add(new TaskList("Take Out Trash", "Take trash and recycling out first thing in the morning.", TaskListStatusTypeEnum.New, new Date(), 1));
-//        taskListList.add(new TaskList("Feed Cat", "Ensure cat had adequate supply of Friskies cat food. Only fill with 3/4 cup of food.", TaskListStatusTypeEnum.New, new Date(), 1));
-//        taskListList.add(new TaskList("Update Calendar", "Check the calendar to make sure all the assignments are scheduled.", TaskListStatusTypeEnum.New, new Date(), 1));
-
         RecyclerView taskListRV = findViewById(R.id.MainActivityRecyclerViewTaskList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         taskListRV.setLayoutManager(layoutManager);
@@ -192,28 +163,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void setupHideBtns(){
+        Button signIn = this.findViewById(R.id.MainActivityBtnSignIn);
+        Button signUp = this.findViewById(R.id.MainActivityBtnSignUp);
+
 
         Amplify.Auth.getCurrentUser(
                 success -> {
-                    Log.i(TAG, "Success!");
-                    if (authUser == null){
-                        signIn.setVisibility(View.VISIBLE);
-                        signUp.setVisibility(View.VISIBLE);
-                    } else {
-                        String username = authUser.getUsername();
-                        Log.i(TAG, "Username is: " + username);
-                        signIn.setVisibility(View.INVISIBLE);
-                        signUp.setVisibility(View.INVISIBLE);
-                    }
+                    String username = success.getUsername();
+                    Log.i(TAG, "Success!" + success);
+                    signIn.setVisibility(View.GONE);
+                    signUp.setVisibility(View.GONE);
                 },
-                failure -> Log.w(TAG, "Failed to get current user")
+                failure -> {
+                    Log.w(TAG, "Failed to get current user");
+
+                }
 
         );
-
-
-
-
     }
+
 
 
 }

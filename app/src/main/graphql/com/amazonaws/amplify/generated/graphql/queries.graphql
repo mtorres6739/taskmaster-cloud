@@ -13,6 +13,7 @@ query GetSuperTeam($id: ID!) {
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -60,6 +61,7 @@ query GetTaskList($id: ID!) {
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }
@@ -85,6 +87,7 @@ query ListTaskLists(
         createdAt
         updatedAt
       }
+      s3ImageKey
       createdAt
       updatedAt
     }
@@ -122,6 +125,7 @@ query TaskListsBySuperTeamIdAndName(
         createdAt
         updatedAt
       }
+      s3ImageKey
       createdAt
       updatedAt
     }

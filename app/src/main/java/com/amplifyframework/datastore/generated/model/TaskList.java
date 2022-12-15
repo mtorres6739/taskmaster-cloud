@@ -34,6 +34,7 @@ public final class TaskList implements Model {
   public static final QueryField DATE_CREATED = field("TaskList", "dateCreated");
   public static final QueryField DIFFICULTY = field("TaskList", "difficulty");
   public static final QueryField SUPER_TEAM = field("TaskList", "superTeamId");
+  public static final QueryField S3_IMAGE_KEY = field("TaskList", "s3ImageKey");
   private final @ModelField(targetType="ID", isRequired = true) String id;
   private final @ModelField(targetType="String", isRequired = true) String name;
   private final @ModelField(targetType="String") String description;
@@ -41,6 +42,7 @@ public final class TaskList implements Model {
   private final @ModelField(targetType="AWSDateTime") Temporal.DateTime dateCreated;
   private final @ModelField(targetType="Int") Integer difficulty;
   private final @ModelField(targetType="SuperTeam") @BelongsTo(targetName = "superTeamId", targetNames = {"superTeamId"}, type = SuperTeam.class) SuperTeam superTeam;
+  private final @ModelField(targetType="String") String s3ImageKey;
   private @ModelField(targetType="AWSDateTime", isReadOnly = true) Temporal.DateTime createdAt;
   private @ModelField(targetType="AWSDateTime", isReadOnly = true) Temporal.DateTime updatedAt;
   public String resolveIdentifier() {
@@ -75,6 +77,10 @@ public final class TaskList implements Model {
       return superTeam;
   }
   
+  public String getS3ImageKey() {
+      return s3ImageKey;
+  }
+  
   public Temporal.DateTime getCreatedAt() {
       return createdAt;
   }
@@ -83,7 +89,7 @@ public final class TaskList implements Model {
       return updatedAt;
   }
   
-  private TaskList(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty, SuperTeam superTeam) {
+  private TaskList(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty, SuperTeam superTeam, String s3ImageKey) {
     this.id = id;
     this.name = name;
     this.description = description;
@@ -91,6 +97,7 @@ public final class TaskList implements Model {
     this.dateCreated = dateCreated;
     this.difficulty = difficulty;
     this.superTeam = superTeam;
+    this.s3ImageKey = s3ImageKey;
   }
   
   @Override
@@ -108,6 +115,7 @@ public final class TaskList implements Model {
               ObjectsCompat.equals(getDateCreated(), taskList.getDateCreated()) &&
               ObjectsCompat.equals(getDifficulty(), taskList.getDifficulty()) &&
               ObjectsCompat.equals(getSuperTeam(), taskList.getSuperTeam()) &&
+              ObjectsCompat.equals(getS3ImageKey(), taskList.getS3ImageKey()) &&
               ObjectsCompat.equals(getCreatedAt(), taskList.getCreatedAt()) &&
               ObjectsCompat.equals(getUpdatedAt(), taskList.getUpdatedAt());
       }
@@ -123,6 +131,7 @@ public final class TaskList implements Model {
       .append(getDateCreated())
       .append(getDifficulty())
       .append(getSuperTeam())
+      .append(getS3ImageKey())
       .append(getCreatedAt())
       .append(getUpdatedAt())
       .toString()
@@ -140,6 +149,7 @@ public final class TaskList implements Model {
       .append("dateCreated=" + String.valueOf(getDateCreated()) + ", ")
       .append("difficulty=" + String.valueOf(getDifficulty()) + ", ")
       .append("superTeam=" + String.valueOf(getSuperTeam()) + ", ")
+      .append("s3ImageKey=" + String.valueOf(getS3ImageKey()) + ", ")
       .append("createdAt=" + String.valueOf(getCreatedAt()) + ", ")
       .append("updatedAt=" + String.valueOf(getUpdatedAt()))
       .append("}")
@@ -166,6 +176,7 @@ public final class TaskList implements Model {
       null,
       null,
       null,
+      null,
       null
     );
   }
@@ -177,7 +188,8 @@ public final class TaskList implements Model {
       type,
       dateCreated,
       difficulty,
-      superTeam);
+      superTeam,
+      s3ImageKey);
   }
   public interface NameStep {
     BuildStep name(String name);
@@ -192,6 +204,7 @@ public final class TaskList implements Model {
     BuildStep dateCreated(Temporal.DateTime dateCreated);
     BuildStep difficulty(Integer difficulty);
     BuildStep superTeam(SuperTeam superTeam);
+    BuildStep s3ImageKey(String s3ImageKey);
   }
   
 
@@ -203,6 +216,7 @@ public final class TaskList implements Model {
     private Temporal.DateTime dateCreated;
     private Integer difficulty;
     private SuperTeam superTeam;
+    private String s3ImageKey;
     @Override
      public TaskList build() {
         String id = this.id != null ? this.id : UUID.randomUUID().toString();
@@ -214,7 +228,8 @@ public final class TaskList implements Model {
           type,
           dateCreated,
           difficulty,
-          superTeam);
+          superTeam,
+          s3ImageKey);
     }
     
     @Override
@@ -254,6 +269,12 @@ public final class TaskList implements Model {
         return this;
     }
     
+    @Override
+     public BuildStep s3ImageKey(String s3ImageKey) {
+        this.s3ImageKey = s3ImageKey;
+        return this;
+    }
+    
     /**
      * @param id id
      * @return Current Builder instance, for fluent method chaining
@@ -266,14 +287,15 @@ public final class TaskList implements Model {
   
 
   public final class CopyOfBuilder extends Builder {
-    private CopyOfBuilder(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty, SuperTeam superTeam) {
+    private CopyOfBuilder(String id, String name, String description, TaskListStatusTypeEnum type, Temporal.DateTime dateCreated, Integer difficulty, SuperTeam superTeam, String s3ImageKey) {
       super.id(id);
       super.name(name)
         .description(description)
         .type(type)
         .dateCreated(dateCreated)
         .difficulty(difficulty)
-        .superTeam(superTeam);
+        .superTeam(superTeam)
+        .s3ImageKey(s3ImageKey);
     }
     
     @Override
@@ -304,6 +326,11 @@ public final class TaskList implements Model {
     @Override
      public CopyOfBuilder superTeam(SuperTeam superTeam) {
       return (CopyOfBuilder) super.superTeam(superTeam);
+    }
+    
+    @Override
+     public CopyOfBuilder s3ImageKey(String s3ImageKey) {
+      return (CopyOfBuilder) super.s3ImageKey(s3ImageKey);
     }
   }
   
