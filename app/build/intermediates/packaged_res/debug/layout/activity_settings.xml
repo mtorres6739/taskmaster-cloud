@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/SettingsTextViewSettings" />
 
     <Button
-        android:id="@+id/SettingsBtnLogout"
+        android:id="@+id/SettingsBtnSignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"

@@ -16,6 +16,7 @@ mutation CreateSuperTeam(
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -42,6 +43,7 @@ mutation UpdateSuperTeam(
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -68,6 +70,7 @@ mutation DeleteSuperTeam(
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -99,6 +102,7 @@ mutation CreateTaskList(
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }
@@ -125,6 +129,7 @@ mutation UpdateTaskList(
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }
@@ -151,6 +156,7 @@ mutation DeleteTaskList(
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }

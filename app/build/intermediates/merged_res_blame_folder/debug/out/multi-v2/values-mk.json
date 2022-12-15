@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.taskmastermdt.app-mergeDebugResources-39:/values-mk/values-mk.xml",
+            "outputFile": "com.taskmastermdt.app-mergeDebugResources-42:/values-mk/values-mk.xml",
             "map": [
                 {
                     "source": "/Users/mathewtorres/.gradle/caches/transforms-3/e40bb6f00ecba2d558cafa18a14c4f93/transformed/navigation-dynamic-features-fragment-2.3.4/res/values-mk/values-mk.xml",

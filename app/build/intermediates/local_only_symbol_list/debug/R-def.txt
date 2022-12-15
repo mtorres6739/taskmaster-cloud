@@ -17,6 +17,8 @@ drawable purple_gradient
 drawable rounded_corners
 id AddTaskBtnAddTask
 id AddTaskBtnBack
+id AddTaskFloatingActionBtnAddImage
+id AddTaskImageViewTaskItem
 id AddTaskPlanTextEditMyTaskTitle
 id AddTaskSpinnerStatus
 id AddTaskSpinnerSuperTeam
@@ -43,8 +45,8 @@ id MainActivityTextViewUsernameTasks
 id SettingSpinnerSelectTeam
 id SettingTextViewSelectTeam
 id SettingsBtnBack
-id SettingsBtnLogout
 id SettingsBtnSave
+id SettingsBtnSignOut
 id SettingsTextEditUsername
 id SettingsTextViewEnterUsername
 id SettingsTextViewSettings
@@ -56,6 +58,7 @@ id SignUpActivityBtnSignUp
 id SignUpActivityTextEditEmail
 id SignUpActivityTextEditPassword
 id TaskDetailBtnBack
+id TaskDetailImageViewTaskImage
 id TaskDetailTextViewTaskDetails
 id TaskDetailTextViewTaskName
 id TaskDetailsTextViewLorem

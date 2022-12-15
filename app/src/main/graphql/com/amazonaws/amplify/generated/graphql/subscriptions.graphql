@@ -13,6 +13,7 @@ subscription OnCreateSuperTeam($filter: ModelSubscriptionSuperTeamFilterInput) {
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -36,6 +37,7 @@ subscription OnUpdateSuperTeam($filter: ModelSubscriptionSuperTeamFilterInput) {
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -59,6 +61,7 @@ subscription OnDeleteSuperTeam($filter: ModelSubscriptionSuperTeamFilterInput) {
         type
         dateCreated
         difficulty
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -87,6 +90,7 @@ subscription OnCreateTaskList($filter: ModelSubscriptionTaskListFilterInput) {
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }
@@ -110,6 +114,7 @@ subscription OnUpdateTaskList($filter: ModelSubscriptionTaskListFilterInput) {
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }
@@ -133,6 +138,7 @@ subscription OnDeleteTaskList($filter: ModelSubscriptionTaskListFilterInput) {
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }

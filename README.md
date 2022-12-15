@@ -14,6 +14,12 @@ TaskMaster is a simple android app that allows you to manage your tasks.
 
 ## Change Log
 
+### 1.0.7
+
+- Added S3 to the project
+- Added a `FileUploadActivity` class for images
+- Added sign out functionality to the settings page
+
 ### 1.0.6
 
 - Added AWS COGNITO to the project

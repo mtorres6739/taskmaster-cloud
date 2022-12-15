@@ -18,6 +18,7 @@ type TaskList @model @auth(rules: [{allow: public}]) {
     dateCreated: AWSDateTime
     difficulty: Int
     superTeam: SuperTeam @belongsTo(fields: ["superTeamId"])
+    s3ImageKey: String
 }
 
 enum TaskListStatusTypeEnum {

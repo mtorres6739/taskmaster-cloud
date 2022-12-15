@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.auth.cognito.result.AWSCognitoAuthSignOutResult;
+import com.amplifyframework.auth.cognito.result.GlobalSignOutError;
+import com.amplifyframework.auth.cognito.result.HostedUIError;
+import com.amplifyframework.auth.cognito.result.RevokeTokenError;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.SuperTeam;
 import com.taskmastermdt.R;
@@ -41,6 +46,13 @@ public class Settings extends AppCompatActivity {
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         saveValuesToSharedPrefs();
         backBtn();
+        setupSignOutBtn();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setupHideBtns();
     }
 
     public void backBtn(){
@@ -99,6 +111,65 @@ public class Settings extends AppCompatActivity {
         });
     }
 
- 
+    public void setupSignOutBtn(){
+        Button signOut = Settings.this.findViewById(R.id.SettingsBtnSignOut);
+        signOut.setOnClickListener(view -> {
+
+            Amplify.Auth.signOut( signOutResult -> {
+                if (signOutResult instanceof AWSCognitoAuthSignOutResult.CompleteSignOut) {
+                    // Sign Out completed fully and without errors.
+                    Log.i("AuthQuickStart", "Signed out successfully");
+                } else if (signOutResult instanceof AWSCognitoAuthSignOutResult.PartialSignOut) {
+                    // Sign Out completed with some errors. User is signed out of the device.
+                    AWSCognitoAuthSignOutResult.PartialSignOut partialSignOutResult =
+                            (AWSCognitoAuthSignOutResult.PartialSignOut) signOutResult;
+
+                    HostedUIError hostedUIError = partialSignOutResult.getHostedUIError();
+                    if (hostedUIError != null) {
+                        Log.e("AuthQuickStart", "HostedUI Error", hostedUIError.getException());
+                        // Optional: Re-launch hostedUIError.getUrl() in a Custom tab to clear Cognito web session.
+                    }
+
+                    GlobalSignOutError globalSignOutError = partialSignOutResult.getGlobalSignOutError();
+                    if (globalSignOutError != null) {
+                        Log.e("AuthQuickStart", "GlobalSignOut Error", globalSignOutError.getException());
+                        // Optional: Use escape hatch to retry revocation of globalSignOutError.getAccessToken().
+                    }
+
+                    RevokeTokenError revokeTokenError = partialSignOutResult.getRevokeTokenError();
+                    if (revokeTokenError != null) {
+                        Log.e("AuthQuickStart", "RevokeToken Error", revokeTokenError.getException());
+                        // Optional: Use escape hatch to retry revocation of revokeTokenError.getRefreshToken().
+                    }
+                } else if (signOutResult instanceof AWSCognitoAuthSignOutResult.FailedSignOut) {
+                    AWSCognitoAuthSignOutResult.FailedSignOut failedSignOutResult =
+                            (AWSCognitoAuthSignOutResult.FailedSignOut) signOutResult;
+                    // Sign Out failed with an exception, leaving the user signed in.
+                    Log.e("AuthQuickStart", "Sign out Failed", failedSignOutResult.getException());
+                }
+            });
+
+            Intent goToMainActivityIntent = new Intent(this, MainActivity.class);
+            startActivity(goToMainActivityIntent);
+        });
+    }
+    public void setupHideBtns(){
+        Button signOut = this.findViewById(R.id.SettingsBtnSignOut);
+
+
+        Amplify.Auth.getCurrentUser(
+                success -> {
+                    String username = success.getUsername();
+                    Log.i(TAG, "Success!" + success);
+                },
+                failure -> {
+                    Log.w(TAG, "Failed to get current user");
+                    signOut.setVisibility(View.GONE);
+
+                }
+
+        );
+    }
+
 
 }

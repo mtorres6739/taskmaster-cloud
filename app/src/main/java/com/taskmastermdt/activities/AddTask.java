@@ -1,14 +1,20 @@
 package com.taskmastermdt.activities;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.documentfile.provider.DocumentFile;
 
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,6 +28,8 @@ import com.amplifyframework.datastore.generated.model.TaskList;
 import com.amplifyframework.datastore.generated.model.TaskListStatusTypeEnum;
 import com.taskmastermdt.R;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -34,52 +42,15 @@ public class AddTask extends AppCompatActivity {
     Spinner superTeamSpinner;
     Spinner taskListStatusTypeSpinner;
     CompletableFuture<List<SuperTeam>> superTeamsFuture = new CompletableFuture<>();
-
+    ActivityResultLauncher<Intent> activityResultLauncher;
+    private String s3ImageKey = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
 
-//        SuperTeam newSuperTeam1 = SuperTeam.builder()
-//                .name("Team Mat")
-//                .email("torres.mathew@gmail.com")
-//                .build();
-//        SuperTeam newSuperTeam2 = SuperTeam.builder()
-//                .name("Team Carrie")
-//                .email("carrie.j.torres@gmail.com")
-//                .build();
-//        SuperTeam newSuperTeam3 = SuperTeam.builder()
-//                .name("Team James")
-//                .email("torres.mathew+james@gmail.com")
-//                .build();
-//        SuperTeam newSuperTeam4 = SuperTeam.builder()
-//                .name("Team Cadence")
-//                .email("torres.mathew+cadence@gmail.com")
-//                .build();
-//        Amplify.API.mutate(
-//                ModelMutation.create(newSuperTeam1),
-//                success -> {},
-//                failure -> {}
-//        );
-//        Amplify.API.mutate(
-//                ModelMutation.create(newSuperTeam2),
-//                success -> {},
-//                failure -> {}
-//        );
-//        Amplify.API.mutate(
-//                ModelMutation.create(newSuperTeam3),
-//                success -> {},
-//                failure -> {}
-//        );
-//        Amplify.API.mutate(
-//                ModelMutation.create(newSuperTeam4),
-//                success -> {},
-//                failure -> {}
-//        );
-
-
-
+        activityResultLauncher = getImagePickingActivityResultLauncher();
         superTeamSpinner = findViewById(R.id.AddTaskSpinnerSuperTeam);
         taskListStatusTypeSpinner = findViewById(R.id.AddTaskSpinnerStatus);
 
@@ -89,7 +60,7 @@ public class AddTask extends AppCompatActivity {
                     Log.i(TAG, "Read Super Teams Successfully");
                     ArrayList<String> teamNames = new ArrayList<>();
                     ArrayList<SuperTeam> superTeams = new ArrayList<>();
-                    for (SuperTeam superTeam: success.getData()) {
+                    for (SuperTeam superTeam : success.getData()) {
                         teamNames.add(superTeam.getName());
                         superTeams.add(superTeam);
                     }
@@ -104,10 +75,10 @@ public class AddTask extends AppCompatActivity {
                 }
         );
 
+        setupAddImagebtn();
         setupTaskListStatusTypeSpinner();
         backBtn();
         setupAddTaskBtn();
-
     }
 
     public void setupSuperTeamSpinner(ArrayList<String> teamNames) {
@@ -117,7 +88,6 @@ public class AddTask extends AppCompatActivity {
                 teamNames
         ));
     }
-
 
 
     public void setupTaskListStatusTypeSpinner() {
@@ -139,39 +109,92 @@ public class AddTask extends AppCompatActivity {
     public void setupAddTaskBtn() {
         Button addTaskBtn = findViewById(R.id.AddTaskBtnAddTask);
         addTaskBtn.setOnClickListener(view -> {
-
-            String selectedSuperTeamString = superTeamSpinner.getSelectedItem().toString();
-            List<SuperTeam> superTeams = null;
-            try {
-                superTeams = superTeamsFuture.get();
-            }
-            catch (InterruptedException ie) {
-                Log.e(TAG, "InterruptedException while getting Super Teams");
-                Thread.currentThread().interrupt();
-            } catch (ExecutionException ee) {
-                Log.e(TAG, "ExecutionException while getting Super Teams");
-            }
-            SuperTeam selectedTeam = superTeams.stream().filter(team -> team.getName().equals(selectedSuperTeamString)).findAny().orElseThrow(RuntimeException::new);
-
-
-            TaskList newTaskListItem = TaskList.builder()
-                    .name(((EditText) findViewById(R.id.AddTaskPlanTextEditMyTaskTitle)).getText().toString())
-                    .description(((EditText) findViewById(R.id.AddTaskTextEditTaskDescription)).getText().toString())
-                    .type((TaskListStatusTypeEnum)taskListStatusTypeSpinner.getSelectedItem())
-                    .dateCreated(new Temporal.DateTime(new Date(), 0))
-                    .difficulty(Integer.parseInt(((EditText) findViewById(R.id.AddTaskTextEditDifficulty)).getText().toString()))
-                    .superTeam(selectedTeam)
-                    .build();
-
-            Amplify.API.mutate(
-                    ModelMutation.create(newTaskListItem),
-                    successResponse -> Log.i(TAG, "AddTaskActivity.onCreate(): made a task item successfully!"),
-                    failureResponse -> Log.w(TAG, "Failed to make a task item.", failureResponse)
-            );
-
-
-            Toast.makeText(this, "Task Added to the List!", Toast.LENGTH_SHORT).show();
+            saveTask();
         });
     }
 
+
+    private void setupAddImagebtn() {
+        findViewById(R.id.AddTaskFloatingActionBtnAddImage).setOnClickListener(view -> {
+            launchImageSelectionIntent();
+        });
+    }
+
+    private void launchImageSelectionIntent() {
+        Intent imageFilePickingIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        imageFilePickingIntent.setType("*/*");
+        imageFilePickingIntent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"image/jpeg", "image/png"});
+        activityResultLauncher.launch(imageFilePickingIntent);
+    }
+
+    private ActivityResultLauncher<Intent> getImagePickingActivityResultLauncher() {
+        ActivityResultLauncher<Intent> imagePickingActivityResultLauncher =
+                registerForActivityResult(
+                        new ActivityResultContracts.StartActivityForResult(),
+                        result -> {
+                            Uri pickedImageFileUri = result.getData().getData();
+                            try {
+                                InputStream pickedImageInputStream = getContentResolver().openInputStream(pickedImageFileUri);
+                                String pickedImageFileName = DocumentFile.fromSingleUri(this, pickedImageFileUri).getName();
+                                Log.i(TAG, "Succeeded in getting input stream from file on phone! Filename is: " + pickedImageFileName);
+                                uploadInputStreamToS3(pickedImageInputStream, pickedImageFileName, pickedImageFileUri);
+                            } catch (FileNotFoundException fnfe) {
+                                Log.e(TAG, "Could not get file from file picker" + fnfe.getMessage());
+                            }
+                        }
+                );
+        return imagePickingActivityResultLauncher;
+    }
+
+    private void uploadInputStreamToS3(InputStream pickedImageInputStream, String pickedImageFileName, Uri pickedImageFileUri) {
+        Amplify.Storage.uploadInputStream(
+                pickedImageFileName,
+                pickedImageInputStream,
+                success -> {
+                    Log.i(TAG, "Succeeded in getting file uploaded to S3! Key is: " + success.getKey());
+                    s3ImageKey = success.getKey();
+                    ImageView taskItemImage = findViewById(R.id.AddTaskImageViewTaskItem);
+                    InputStream pickedImageInputStreamCopy = null;
+                    try {
+                        pickedImageInputStreamCopy = getContentResolver().openInputStream(pickedImageFileUri);
+                    } catch (FileNotFoundException fnfe) {
+                        Log.e(TAG, "Could not get file stream from Uri!" + fnfe.getMessage());
+                    }
+                    taskItemImage.setImageBitmap(BitmapFactory.decodeStream(pickedImageInputStreamCopy));
+                },
+                failure -> Log.e(TAG, "Failure in uploading file to s3 with filename: " + pickedImageFileName + "with error: " + failure.getMessage())
+        );
+    }
+
+    private void saveTask() {
+        String selectedSuperTeamString = superTeamSpinner.getSelectedItem().toString();
+        List<SuperTeam> superTeams = null;
+        try {
+            superTeams = superTeamsFuture.get();
+        } catch (InterruptedException ie) {
+            Log.e(TAG, "InterruptedException while getting Super Teams");
+            Thread.currentThread().interrupt();
+        } catch (ExecutionException ee) {
+            Log.e(TAG, "ExecutionException while getting Super Teams");
+        }
+        SuperTeam selectedTeam = superTeams.stream().filter(team -> team.getName().equals(selectedSuperTeamString)).findAny().orElseThrow(RuntimeException::new);
+
+        TaskList newTaskListItem = TaskList.builder()
+                .name(((EditText) findViewById(R.id.AddTaskPlanTextEditMyTaskTitle)).getText().toString())
+                .description(((EditText) findViewById(R.id.AddTaskTextEditTaskDescription)).getText().toString())
+                .type((TaskListStatusTypeEnum) taskListStatusTypeSpinner.getSelectedItem())
+                .dateCreated(new Temporal.DateTime(new Date(), 0))
+                .difficulty(Integer.parseInt(((EditText) findViewById(R.id.AddTaskTextEditDifficulty)).getText().toString()))
+                .superTeam(selectedTeam)
+                .s3ImageKey(s3ImageKey)
+                .build();
+
+        Amplify.API.mutate(
+                ModelMutation.create(newTaskListItem),
+                successResponse -> Log.i(TAG, "AddTaskActivity.onCreate(): made a task item successfully!"),
+                failureResponse -> Log.w(TAG, "Failed to make a task item.", failureResponse)
+        );
+
+        Toast.makeText(this, "Task Added to the List!", Toast.LENGTH_SHORT).show();
+    }
 }

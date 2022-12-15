@@ -59,8 +59,18 @@ public class TaskListRecyclerViewAdapter extends RecyclerView.Adapter<TaskListRe
         View taskListItemView = holder.itemView;
         taskListItemView.setOnClickListener(view -> {
             Intent goToTaskDetailIntent = new Intent(callingActivity, TaskDetail.class);
+            goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_IMAGE_TAG, taskList.getS3ImageKey());
             goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_NAME_TAG, taskList.getName());
-            goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_BODY_TAG, taskList.getName() + taskList.getDateCreated());
+            goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_BODY_TAG,
+                    "Task: " + taskList.getName() +
+                            "\n" +
+                            "Status: " + taskList.getType() +
+                            "\n" +
+                            "Difficulty: " + taskList.getDifficulty() +
+                            "\n" + "\n" +
+                            "Description: " + taskList.getDescription() +
+                            "\n" +
+                            "Date Created: " + temporalDateTime);
             callingActivity.startActivity(goToTaskDetailIntent);
 
         });
