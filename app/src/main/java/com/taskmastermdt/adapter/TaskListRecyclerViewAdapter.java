@@ -56,10 +56,12 @@ public class TaskListRecyclerViewAdapter extends RecyclerView.Adapter<TaskListRe
         TextView taskListFragmentTextViewStatus = holder.itemView.findViewById(R.id.TaskListTextViewTaskStatus);
         taskListFragmentTextViewStatus.setText(taskList.getType() + "\n" + "Difficulty: " + taskList.getDifficulty());
 
+        String taskImageTag = taskListList.get(position).getS3ImageKey();
+
         View taskListItemView = holder.itemView;
         taskListItemView.setOnClickListener(view -> {
             Intent goToTaskDetailIntent = new Intent(callingActivity, TaskDetail.class);
-            goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_IMAGE_TAG, taskList.getS3ImageKey());
+            goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_IMAGE_TAG, taskImageTag);
             goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_NAME_TAG, taskList.getName());
             goToTaskDetailIntent.putExtra(MainActivity.TASKMASTER_TASK_BODY_TAG,
                     "Task: " + taskList.getName() +

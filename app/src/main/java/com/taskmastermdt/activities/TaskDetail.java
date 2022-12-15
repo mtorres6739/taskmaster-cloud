@@ -2,8 +2,10 @@ package com.taskmastermdt.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -30,7 +32,7 @@ public class TaskDetail extends AppCompatActivity {
         setContentView(R.layout.activity_task_detail);
 //        receiveSetupTaskButtonValues();
         receiveSetupTaskBodyValue();
-//        setupTaskImage();
+        setupTaskImage();
         backBtn();
     }
 
@@ -72,6 +74,7 @@ public class TaskDetail extends AppCompatActivity {
 
 
 
+
     public void backBtn(){
         Button goToMainActivityPageFromTaskDetailPage = TaskDetail.this.findViewById(R.id.TaskDetailBtnBack);
         goToMainActivityPageFromTaskDetailPage.setOnClickListener(view -> {
@@ -93,23 +96,26 @@ public class TaskDetail extends AppCompatActivity {
     }
 
     private void setupTaskImage(){
-        String taskImageKeyString = null;
-        taskImageKeyString = callingIntent.getStringExtra(MainActivity.TASKMASTER_TASK_IMAGE_TAG);
-        if (taskImageKeyString != null && !taskImageKeyString.isEmpty()) {
-
-            Amplify.Storage.downloadFile(
-                    taskImageKeyString,
-                    new File(getApplication().getFilesDir(), taskImageKeyString),
-                    success -> {
-                        Log.i(TAG, "Success getting image");
-                        ImageView taskImageView = findViewById(R.id.TaskDetailImageViewTaskImage);
-                        taskImageView.setImageBitmap(BitmapFactory.decodeFile(success.getFile().getPath()));
-                    },
-                    failure -> {
-                        Log.e(TAG, "Failed to get image with s3 key because " + failure.getMessage());
-                    }
-            );
+        Intent callingIntent = getIntent();
+        String taskImageTag;
+        File taskImage;
+        if (callingIntent != null) {
+            if (callingIntent.getStringExtra(MainActivity.TASKMASTER_TASK_IMAGE_TAG) != null) {
+                ImageView taskImageView = findViewById(R.id.TaskDetailImageViewTaskImage);
+                taskImageTag = callingIntent.getStringExtra(MainActivity.TASKMASTER_TASK_IMAGE_TAG).split("/")[1];
+                taskImage = new File(getApplicationContext().getFilesDir() + "/" + taskImageTag);
+                Amplify.Storage.downloadFile(
+                        taskImageTag,
+                        taskImage,
+                        success -> {
+                            Log.i(TAG, "Success getting image" + success.getFile());
+                            taskImageView.setImageURI(Uri.parse(success.getFile().getPath()));
+                        },
+                        failure -> Log.e(TAG, "Failed to get image: " + failure.getMessage())
+                );
+            }
         }
+        
 
     }
 }
