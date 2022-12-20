@@ -34,6 +34,7 @@ public class TaskDetail extends AppCompatActivity {
         receiveSetupTaskBodyValue();
         setupTaskImage();
         backBtn();
+        setupLocationBtn();
     }
 
     @Override
@@ -116,6 +117,13 @@ public class TaskDetail extends AppCompatActivity {
             }
         }
 
+    }
 
+    private void setupLocationBtn(){
+        Button goToLocationActivityBtn = TaskDetail.this.findViewById(R.id.TaskDetailBtnLocation);
+        goToLocationActivityBtn.setOnClickListener(view -> {
+            Intent goToLocationActivityIntent = new Intent(this, LocationActivity.class);
+            startActivity(goToLocationActivityIntent);
+        });
     }
 }

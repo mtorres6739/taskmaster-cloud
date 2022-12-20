@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.taskmastermdt.app-mergeDebugResources-42:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+            "outputFile": "com.taskmastermdt.app-mergeDebugResources-44:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
                     "source": "/Users/mathewtorres/.gradle/caches/transforms-3/598c05c81fe9254b4832878dd4a0db6b/transformed/material-1.5.0/res/values-w480dp-port-v13/values-w480dp-port-v13.xml",

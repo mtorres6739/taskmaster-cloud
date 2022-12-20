@@ -58,6 +58,7 @@ id SignUpActivityBtnSignUp
 id SignUpActivityTextEditEmail
 id SignUpActivityTextEditPassword
 id TaskDetailBtnBack
+id TaskDetailBtnLocation
 id TaskDetailImageViewTaskImage
 id TaskDetailTextViewTaskDetails
 id TaskDetailTextViewTaskName
@@ -81,6 +82,7 @@ layout activity_add_task
 layout activity_all_tasks
 layout activity_auth_sign_in
 layout activity_auth_sign_up
+layout activity_location
 layout activity_login_test
 layout activity_main
 layout activity_settings
@@ -90,6 +92,10 @@ layout activity_task_detail
 layout activity_verify_sign_up
 layout fragment_task_list
 mipmap ic_launcher
+mipmap ic_launcher2
+mipmap ic_launcher_background
+mipmap ic_launcher_foreground
+mipmap ic_launcher_monochrome
 mipmap ic_launcher_round
 raw amplifyconfiguration
 raw awsconfiguration
