@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.taskmastermdt.app-mergeDebugResources-42:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.taskmastermdt.app-mergeDebugResources-44:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "/Users/mathewtorres/.gradle/caches/transforms-3/598c05c81fe9254b4832878dd4a0db6b/transformed/material-1.5.0/res/values-large-v4/values-large-v4.xml",
