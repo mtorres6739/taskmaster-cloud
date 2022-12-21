@@ -35,6 +35,7 @@ public class TaskDetail extends AppCompatActivity {
         setupTaskImage();
         backBtn();
         setupLocationBtn();
+        setupAnalyticsBtn();
     }
 
     @Override
@@ -124,6 +125,14 @@ public class TaskDetail extends AppCompatActivity {
         goToLocationActivityBtn.setOnClickListener(view -> {
             Intent goToLocationActivityIntent = new Intent(this, LocationActivity.class);
             startActivity(goToLocationActivityIntent);
+        });
+    }
+
+    private void setupAnalyticsBtn(){
+        Button goToAnalyticsActivityBtn = TaskDetail.this.findViewById(R.id.TaskDetailBtnAnalytics);
+        goToAnalyticsActivityBtn.setOnClickListener(view -> {
+            Intent goToAnalyticsActivityIntent = new Intent(this, AnalyticsActivity.class);
+            startActivity(goToAnalyticsActivityIntent);
         });
     }
 }

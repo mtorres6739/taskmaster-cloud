@@ -57,6 +57,7 @@ id SignInActivityTextViewSignIn
 id SignUpActivityBtnSignUp
 id SignUpActivityTextEditEmail
 id SignUpActivityTextEditPassword
+id TaskDetailBtnAnalytics
 id TaskDetailBtnBack
 id TaskDetailBtnLocation
 id TaskDetailImageViewTaskImage
@@ -80,6 +81,7 @@ id signUpActivityTextViewSignUp
 id username
 layout activity_add_task
 layout activity_all_tasks
+layout activity_analytics
 layout activity_auth_sign_in
 layout activity_auth_sign_up
 layout activity_location
