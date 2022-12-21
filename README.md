@@ -14,6 +14,11 @@ TaskMaster is a simple android app that allows you to manage your tasks.
 
 ## Change Log
 
+## 1.0.10
+
+- Added analytics to the project
+- Added a `AnalyticsActivity` class
+
 ### 1.0.9
 
 - Added google location services to the project
