@@ -53,5 +53,11 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": []
     }
+  },
+  "analytics": {
+    "taskmastercloud": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

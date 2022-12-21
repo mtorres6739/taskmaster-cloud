@@ -16,509 +16,569 @@
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 12-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:6:5-81
 12-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:6:22-78
-13
-14    <!-- Permission will be merged into the manifest of the hosting app. -->
-15    <!-- Is required to launch foreground transfer service for targetSdkVersion 28+. -->
-16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-16-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:25:5-77
-16-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:25:22-74
-17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:26:5-79
-17-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:26:22-76
-18    <uses-permission android:name="android.permission.INTERNET" />
-18-->[com.amplifyframework:aws-api:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/85bc1b1d100a23eb5f5d0e4e297de5f8/transformed/aws-api-2.0.0/AndroidManifest.xml:24:5-67
-18-->[com.amplifyframework:aws-api:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/85bc1b1d100a23eb5f5d0e4e297de5f8/transformed/aws-api-2.0.0/AndroidManifest.xml:24:22-64
-19
-20    <queries>
-20-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:24:5-33:15
-21        <intent>
-21-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:25:9-29:18
-22            <action android:name="android.intent.action.VIEW" />
-22-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:26:13-65
-22-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:26:21-62
-23
-24            <data android:scheme="https" />
-24-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:28:13-44
-24-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:28:19-41
-25        </intent>
-26        <intent>
-26-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:30:9-32:18
-27            <action android:name="android.support.customtabs.action.CustomTabsService" />
-27-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:31:13-90
-27-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:31:21-87
-28        </intent>
-29    </queries>
-30
-31    <uses-permission android:name="android.permission.WAKE_LOCK" />
-31-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
-31-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:22-65
-32    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-32-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:5-81
-32-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:22-78
-33
-34    <application
-34-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:8:5-95:19
-35        android:name="com.taskmastermdt.TaskmasterAmplifyApplication"
-35-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:9:9-53
-36        android:allowBackup="true"
-36-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:10:9-35
-37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.7.0] /Users/mathewtorres/.gradle/caches/transforms-3/5586099dc2be2a001572cf14c2426ba8/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-38        android:dataExtractionRules="@xml/data_extraction_rules"
-38-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:11:9-65
-39        android:debuggable="true"
-40        android:extractNativeLibs="false"
-41        android:fullBackupContent="@xml/backup_rules"
-41-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:12:9-54
-42        android:icon="@mipmap/ic_launcher2"
-42-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:13:9-44
-43        android:label="@string/app_name"
-43-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:14:9-41
-44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:15:9-54
-45        android:supportsRtl="true"
-45-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:16:9-35
-46        android:testOnly="true"
-47        android:theme="@style/Theme.TaskmasterMDT" >
-47-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:17:9-51
-48        <activity
-48-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:19:9-25:20
-49            android:name="com.taskmastermdt.activities.LocationActivity"
-49-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:20:13-56
-50            android:exported="false" >
-50-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:21:13-37
-51            <meta-data
-51-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-52                android:name="android.app.lib_name"
-52-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-53                android:value="" />
-53-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-54        </activity>
-55        <activity
-55-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:26:9-32:20
-56            android:name="com.taskmastermdt.activities.auth.VerifySignUpActivity"
-56-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:27:13-65
-57            android:exported="false" >
-57-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:28:13-37
-58            <meta-data
-58-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-59                android:name="android.app.lib_name"
-59-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-60                android:value="" />
-60-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-61        </activity>
-62        <activity
-62-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:33:9-39:20
-63            android:name="com.taskmastermdt.activities.auth.SignUpActivity"
-63-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:34:13-59
-64            android:exported="false" >
-64-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:35:13-37
-65            <meta-data
-65-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-66                android:name="android.app.lib_name"
-66-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-67                android:value="" />
-67-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-68        </activity>
-69        <activity
-69-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:40:9-46:20
-70            android:name="com.taskmastermdt.activities.auth.SignInActivity"
-70-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:41:13-59
-71            android:exported="false" >
-71-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:42:13-37
-72            <meta-data
-72-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-73                android:name="android.app.lib_name"
-73-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-74                android:value="" />
-74-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-75        </activity>
-76        <activity
-76-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:47:9-53:20
-77            android:name="com.taskmastermdt.adapter.TaskListRecyclerViewAdapter"
-77-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:48:13-64
-78            android:exported="false" >
-78-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:49:13-37
-79            <meta-data
-79-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-80                android:name="android.app.lib_name"
-80-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-81                android:value="" />
-81-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-82        </activity>
-83        <activity
-83-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:54:9-60:20
-84            android:name="com.taskmastermdt.activities.Settings"
-84-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:55:13-48
-85            android:exported="false" >
-85-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:56:13-37
-86            <meta-data
-86-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-87                android:name="android.app.lib_name"
-87-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-88                android:value="" />
-88-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-89        </activity>
-90        <activity
-90-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:61:9-67:20
-91            android:name="com.taskmastermdt.activities.TaskDetail"
-91-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:62:13-50
-92            android:exported="false" >
-92-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:63:13-37
-93            <meta-data
-93-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-94                android:name="android.app.lib_name"
-94-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-95                android:value="" />
-95-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-96        </activity>
-97        <activity
-97-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:68:9-74:20
-98            android:name="com.taskmastermdt.activities.AllTasks"
-98-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:69:13-48
-99            android:exported="false" >
-99-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:70:13-37
-100            <meta-data
-100-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-101                android:name="android.app.lib_name"
-101-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-102                android:value="" />
-102-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-103        </activity>
-104        <activity
-104-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:75:9-81:20
-105            android:name="com.taskmastermdt.activities.AddTask"
-105-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:76:13-47
-106            android:exported="false" >
-106-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:77:13-37
-107            <meta-data
-107-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-108                android:name="android.app.lib_name"
-108-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-109                android:value="" />
-109-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-110        </activity>
-111        <activity
-111-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:82:9-94:20
-112            android:name="com.taskmastermdt.activities.MainActivity"
-112-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:83:13-52
-113            android:exported="true" >
-113-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:84:13-36
-114            <intent-filter>
-114-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:85:13-89:29
-115                <action android:name="android.intent.action.MAIN" />
-115-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:86:17-69
-115-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:86:25-66
-116
-117                <category android:name="android.intent.category.LAUNCHER" />
-117-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:88:17-77
-117-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:88:27-74
-118            </intent-filter>
-119
-120            <meta-data
-120-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
-121                android:name="android.app.lib_name"
-121-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
-122                android:value="" />
-122-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
-123        </activity>
-124        <activity
-124-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:36:9-40:75
-125            android:name="com.amplifyframework.auth.cognito.activities.CustomTabsManagerActivity"
-125-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:37:13-98
-126            android:exported="false"
-126-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:38:13-37
-127            android:launchMode="singleTask"
-127-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:39:13-44
-128            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-128-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:40:13-72
-129        <activity
-129-->[com.amplifyframework:core:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:27:9-29:54
-130            android:name="com.amplifyframework.devmenu.DeveloperMenuActivity"
-130-->[com.amplifyframework:core:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:28:13-78
-131            android:theme="@style/OverlayActivity" />
-131-->[com.amplifyframework:core:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:29:13-51
-132        <activity
-132-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-133            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-133-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-134            android:exported="false"
-134-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-135            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-135-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-136
-137        <meta-data
-137-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-138            android:name="com.google.android.gms.version"
-138-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-139            android:value="@integer/google_play_services_version" />
-139-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-140
-141        <provider
-141-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-142            android:name="androidx.startup.InitializationProvider"
-142-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-143            android:authorities="com.taskmastermdt.androidx-startup"
-143-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-144            android:exported="false" >
-144-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-145            <meta-data
-145-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-146                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-146-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-147                android:value="androidx.startup" />
-147-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-148            <meta-data
-148-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
-149                android:name="androidx.work.WorkManagerInitializer"
-149-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
-150                android:value="androidx.startup" />
-150-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
-151            <meta-data
-151-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mathewtorres/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-152                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-152-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mathewtorres/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-153                android:value="androidx.startup" />
-153-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mathewtorres/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-154        </provider>
-155
-156        <service
-156-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
-157            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-157-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
-158            android:directBootAware="false"
-158-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
-159            android:enabled="@bool/enable_system_alarm_service_default"
-159-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
-160            android:exported="false" />
-160-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
-161        <service
-161-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
-162            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-162-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
-163            android:directBootAware="false"
-163-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
-164            android:enabled="@bool/enable_system_job_service_default"
-164-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+13    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission will be merged into the manifest of the hosting app. -->
+13-->[com.amplifyframework:aws-api:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/85bc1b1d100a23eb5f5d0e4e297de5f8/transformed/aws-api-2.0.0/AndroidManifest.xml:24:5-67
+13-->[com.amplifyframework:aws-api:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/85bc1b1d100a23eb5f5d0e4e297de5f8/transformed/aws-api-2.0.0/AndroidManifest.xml:24:22-64
+14    <!-- Is required to launch foreground transfer service for targetSdkVersion 28+. -->
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:25:5-77
+15-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:25:22-74
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:26:5-79
+16-->[com.amplifyframework:aws-storage-s3:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:26:22-76
+17
+18    <queries>
+18-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:24:5-33:15
+19        <intent>
+19-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:25:9-29:18
+20            <action android:name="android.intent.action.VIEW" />
+20-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:26:13-65
+20-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:26:21-62
+21
+22            <data android:scheme="https" />
+22-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:28:13-44
+22-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:28:19-41
+23        </intent>
+24        <intent>
+24-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:30:9-32:18
+25            <action android:name="android.support.customtabs.action.CustomTabsService" />
+25-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:31:13-90
+25-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:31:21-87
+26        </intent>
+27    </queries>
+28
+29    <uses-permission android:name="android.permission.REORDER_TASKS" />
+29-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:24:5-72
+29-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:24:22-69
+30    <uses-permission android:name="android.permission.WAKE_LOCK" />
+30-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
+30-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:22-65
+31    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+31-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:5-81
+31-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:22-78
+32
+33    <application
+33-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:8:5-102:19
+34        android:name="com.taskmastermdt.TaskmasterAmplifyApplication"
+34-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:9:9-53
+35        android:allowBackup="true"
+35-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:10:9-35
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.7.0] /Users/mathewtorres/.gradle/caches/transforms-3/5586099dc2be2a001572cf14c2426ba8/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+37        android:dataExtractionRules="@xml/data_extraction_rules"
+37-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:11:9-65
+38        android:debuggable="true"
+39        android:extractNativeLibs="false"
+40        android:fullBackupContent="@xml/backup_rules"
+40-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:12:9-54
+41        android:icon="@mipmap/ic_launcher2"
+41-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:13:9-44
+42        android:label="@string/app_name"
+42-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:14:9-41
+43        android:roundIcon="@mipmap/ic_launcher_round"
+43-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:15:9-54
+44        android:supportsRtl="true"
+44-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:16:9-35
+45        android:testOnly="true"
+46        android:theme="@style/Theme.TaskmasterMDT" >
+46-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:17:9-51
+47        <activity
+47-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:19:9-25:20
+48            android:name="com.taskmastermdt.activities.AnalyticsActivity"
+48-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:20:13-57
+49            android:exported="false" >
+49-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:21:13-37
+50            <meta-data
+50-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+51                android:name="android.app.lib_name"
+51-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+52                android:value="" />
+52-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+53        </activity>
+54        <activity
+54-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:26:9-32:20
+55            android:name="com.taskmastermdt.activities.LocationActivity"
+55-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:27:13-56
+56            android:exported="false" >
+56-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:28:13-37
+57            <meta-data
+57-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+58                android:name="android.app.lib_name"
+58-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+59                android:value="" />
+59-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+60        </activity>
+61        <activity
+61-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:33:9-39:20
+62            android:name="com.taskmastermdt.activities.auth.VerifySignUpActivity"
+62-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:34:13-65
+63            android:exported="true" >
+63-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:35:13-36
+64            <meta-data
+64-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+65                android:name="android.app.lib_name"
+65-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+66                android:value="" />
+66-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+67        </activity>
+68        <activity
+68-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:40:9-46:20
+69            android:name="com.taskmastermdt.activities.auth.SignUpActivity"
+69-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:41:13-59
+70            android:exported="true" >
+70-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:42:13-36
+71            <meta-data
+71-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+72                android:name="android.app.lib_name"
+72-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+73                android:value="" />
+73-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+74        </activity>
+75        <activity
+75-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:47:9-53:20
+76            android:name="com.taskmastermdt.activities.auth.SignInActivity"
+76-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:48:13-59
+77            android:exported="true" >
+77-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:49:13-36
+78            <meta-data
+78-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+79                android:name="android.app.lib_name"
+79-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+80                android:value="" />
+80-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+81        </activity>
+82        <activity
+82-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:54:9-60:20
+83            android:name="com.taskmastermdt.adapter.TaskListRecyclerViewAdapter"
+83-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:55:13-64
+84            android:exported="false" >
+84-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:56:13-37
+85            <meta-data
+85-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+86                android:name="android.app.lib_name"
+86-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+87                android:value="" />
+87-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+88        </activity>
+89        <activity
+89-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:61:9-67:20
+90            android:name="com.taskmastermdt.activities.Settings"
+90-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:62:13-48
+91            android:exported="false" >
+91-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:63:13-37
+92            <meta-data
+92-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+93                android:name="android.app.lib_name"
+93-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+94                android:value="" />
+94-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+95        </activity>
+96        <activity
+96-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:68:9-74:20
+97            android:name="com.taskmastermdt.activities.TaskDetail"
+97-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:69:13-50
+98            android:exported="false" >
+98-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:70:13-37
+99            <meta-data
+99-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+100                android:name="android.app.lib_name"
+100-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+101                android:value="" />
+101-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+102        </activity>
+103        <activity
+103-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:75:9-81:20
+104            android:name="com.taskmastermdt.activities.AllTasks"
+104-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:76:13-48
+105            android:exported="false" >
+105-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:77:13-37
+106            <meta-data
+106-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+107                android:name="android.app.lib_name"
+107-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+108                android:value="" />
+108-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+109        </activity>
+110        <activity
+110-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:82:9-88:20
+111            android:name="com.taskmastermdt.activities.AddTask"
+111-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:83:13-47
+112            android:exported="false" >
+112-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:84:13-37
+113            <meta-data
+113-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+114                android:name="android.app.lib_name"
+114-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+115                android:value="" />
+115-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+116        </activity>
+117        <activity
+117-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:89:9-101:20
+118            android:name="com.taskmastermdt.activities.MainActivity"
+118-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:90:13-52
+119            android:exported="true" >
+119-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:91:13-36
+120            <intent-filter>
+120-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:92:13-96:29
+121                <action android:name="android.intent.action.MAIN" />
+121-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:17-69
+121-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:25-66
+122
+123                <category android:name="android.intent.category.LAUNCHER" />
+123-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:95:17-77
+123-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:95:27-74
+124            </intent-filter>
+125
+126            <meta-data
+126-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:22:13-24:36
+127                android:name="android.app.lib_name"
+127-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:23:17-52
+128                android:value="" />
+128-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:24:17-33
+129        </activity>
+130        <activity
+130-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:36:9-40:75
+131            android:name="com.amplifyframework.auth.cognito.activities.CustomTabsManagerActivity"
+131-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:37:13-98
+132            android:exported="false"
+132-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:38:13-37
+133            android:launchMode="singleTask"
+133-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:39:13-44
+134            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+134-->[com.amplifyframework:aws-auth-cognito:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:40:13-72
+135        <activity
+135-->[com.amplifyframework:core:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:27:9-29:54
+136            android:name="com.amplifyframework.devmenu.DeveloperMenuActivity"
+136-->[com.amplifyframework:core:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:28:13-78
+137            android:theme="@style/OverlayActivity" />
+137-->[com.amplifyframework:core:2.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:29:13-51
+138        <activity
+138-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+139            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+139-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+140            android:exported="false"
+140-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+141            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+141-->[com.google.android.gms:play-services-base:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+142
+143        <meta-data
+143-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+144            android:name="com.google.android.gms.version"
+144-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+145            android:value="@integer/google_play_services_version" />
+145-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mathewtorres/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+146
+147        <activity
+147-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:27:9-34:20
+148            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+148-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:28:13-99
+149            android:exported="true"
+149-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:29:13-36
+150            android:theme="@android:style/Theme" >
+150-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:30:13-49
+151            <intent-filter>
+151-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:31:13-33:29
+152                <action android:name="android.intent.action.MAIN" />
+152-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:17-69
+152-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:25-66
+153            </intent-filter>
+154        </activity>
+155        <activity
+155-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:35:9-42:20
+156            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+156-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:36:13-95
+157            android:exported="true"
+157-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:37:13-36
+158            android:theme="@android:style/Theme" >
+158-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:38:13-49
+159            <intent-filter>
+159-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:31:13-33:29
+160                <action android:name="android.intent.action.MAIN" />
+160-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:17-69
+160-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:25-66
+161            </intent-filter>
+162        </activity>
+163        <activity
+163-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:43:9-50:20
+164            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+164-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:44:13-103
 165            android:exported="true"
-165-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
-166            android:permission="android.permission.BIND_JOB_SERVICE" />
-166-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
-167        <service
-167-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
-168            android:name="androidx.work.impl.foreground.SystemForegroundService"
-168-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
-169            android:directBootAware="false"
-169-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
-170            android:enabled="@bool/enable_system_foreground_service_default"
-170-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
-171            android:exported="false" />
-171-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
-172
-173        <receiver
-173-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
-174            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-174-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
-175            android:directBootAware="false"
-175-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
-176            android:enabled="true"
-176-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
-177            android:exported="false" />
-177-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
-178        <receiver
-178-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
-179            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-179-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
-180            android:directBootAware="false"
-180-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
-181            android:enabled="false"
-181-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
-182            android:exported="false" >
-182-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
-183            <intent-filter>
-183-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
-184                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-184-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
-184-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
-185                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-185-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
-185-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
-186            </intent-filter>
-187        </receiver>
-188        <receiver
-188-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
-189            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-189-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
-190            android:directBootAware="false"
-190-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
-191            android:enabled="false"
-191-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
-192            android:exported="false" >
-192-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
-193            <intent-filter>
-193-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
-194                <action android:name="android.intent.action.BATTERY_OKAY" />
-194-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
-194-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
-195                <action android:name="android.intent.action.BATTERY_LOW" />
-195-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
-195-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
-196            </intent-filter>
-197        </receiver>
-198        <receiver
-198-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
-199            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-199-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+165-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:45:13-36
+166            android:theme="@android:style/Theme.Dialog" >
+166-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:46:13-56
+167            <intent-filter>
+167-->[androidx.test:core:1.3.0] /Users/mathewtorres/.gradle/caches/transforms-3/47c4126e7443fc166e293c6b615ea0e4/transformed/core-1.3.0/AndroidManifest.xml:31:13-33:29
+168                <action android:name="android.intent.action.MAIN" />
+168-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:17-69
+168-->/Users/mathewtorres/projects/courses/401/taskmaster-cloud/app/src/main/AndroidManifest.xml:93:25-66
+169            </intent-filter>
+170        </activity>
+171
+172        <provider
+172-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+173            android:name="androidx.startup.InitializationProvider"
+173-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+174            android:authorities="com.taskmastermdt.androidx-startup"
+174-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+175            android:exported="false" >
+175-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+176            <meta-data
+176-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+177                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+177-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+178                android:value="androidx.startup" />
+178-->[androidx.emoji2:emoji2:1.0.0] /Users/mathewtorres/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+179            <meta-data
+179-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+180                android:name="androidx.work.WorkManagerInitializer"
+180-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+181                android:value="androidx.startup" />
+181-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+182            <meta-data
+182-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mathewtorres/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+183                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+183-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mathewtorres/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+184                android:value="androidx.startup" />
+184-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mathewtorres/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+185        </provider>
+186
+187        <service
+187-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+188            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+188-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+189            android:directBootAware="false"
+189-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+190            android:enabled="@bool/enable_system_alarm_service_default"
+190-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+191            android:exported="false" />
+191-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+192        <service
+192-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+193            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+193-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+194            android:directBootAware="false"
+194-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+195            android:enabled="@bool/enable_system_job_service_default"
+195-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+196            android:exported="true"
+196-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+197            android:permission="android.permission.BIND_JOB_SERVICE" />
+197-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+198        <service
+198-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+199            android:name="androidx.work.impl.foreground.SystemForegroundService"
+199-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
 200            android:directBootAware="false"
-200-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
-201            android:enabled="false"
-201-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
-202            android:exported="false" >
-202-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
-203            <intent-filter>
-203-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
-204                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-204-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
-204-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
-205                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-205-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
-205-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
-206            </intent-filter>
-207        </receiver>
-208        <receiver
-208-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
-209            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-209-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
-210            android:directBootAware="false"
-210-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
-211            android:enabled="false"
-211-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
-212            android:exported="false" >
-212-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
-213            <intent-filter>
-213-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
-214                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-214-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
-214-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
-215            </intent-filter>
-216        </receiver>
-217        <receiver
-217-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
-218            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-218-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
-219            android:directBootAware="false"
-219-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
-220            android:enabled="false"
-220-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
-221            android:exported="false" >
-221-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
-222            <intent-filter>
-222-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
-223                <action android:name="android.intent.action.BOOT_COMPLETED" />
-223-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:17-79
-223-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:25-76
-224                <action android:name="android.intent.action.TIME_SET" />
-224-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
-224-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
-225                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-225-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
-225-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
-226            </intent-filter>
-227        </receiver>
-228        <receiver
-228-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
-229            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-229-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
-230            android:directBootAware="false"
-230-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
-231            android:enabled="@bool/enable_system_alarm_service_default"
-231-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
-232            android:exported="false" >
-232-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
-233            <intent-filter>
-233-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
-234                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-234-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
-234-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
-235            </intent-filter>
-236        </receiver>
-237        <receiver
-237-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
-238            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-238-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
-239            android:directBootAware="false"
-239-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
-240            android:enabled="true"
-240-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
-241            android:exported="true"
-241-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
-242            android:permission="android.permission.DUMP" >
-242-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
-243            <intent-filter>
-243-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
-244                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-244-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
-244-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
-245            </intent-filter>
-246        </receiver>
-247
-248        <service
-248-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
-249            android:name="androidx.room.MultiInstanceInvalidationService"
-249-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
-250            android:directBootAware="true"
-250-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
-251            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
-251-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
-252        <activity
-252-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:5-271
-253            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-253-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:15-102
-254            android:enabled="false"
-254-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:103-126
-255            android:exported="false"
-255-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:127-151
-256            android:launchMode="singleInstance"
-256-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:204-239
-257            android:process=":playcore_missing_splits_activity"
-257-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:152-203
-258            android:stateNotNeeded="true" />
-258-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:240-269
-259        <activity
-259-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:5-226
-260            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-260-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:15-95
-261            android:enabled="false"
-261-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:96-119
-262            android:exported="false"
-262-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:120-144
-263            android:stateNotNeeded="true"
-263-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:145-174
-264            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
-264-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:175-224
-265        <service
-265-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:5-18:15
-266            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-266-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:14-95
-267            android:enabled="false"
-267-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:96-119
-268            android:exported="true" >
-268-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:120-143
-269            <meta-data
-269-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:17:7-108
-270                android:name="com.google.android.play.core.assetpacks.versionCode"
-270-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:17:18-84
-271                android:value="10901" />
-271-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:17:85-106
-272        </service>
-273        <service
-273-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:5-147
-274            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-274-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:14-96
-275            android:enabled="false"
-275-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:97-120
-276            android:exported="false" />
-276-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:121-145
-277    </application>
+200-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+201            android:enabled="@bool/enable_system_foreground_service_default"
+201-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+202            android:exported="false" />
+202-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+203
+204        <receiver
+204-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+205            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+205-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+206            android:directBootAware="false"
+206-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+207            android:enabled="true"
+207-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+208            android:exported="false" />
+208-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+209        <receiver
+209-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+210            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+210-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+211            android:directBootAware="false"
+211-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+212            android:enabled="false"
+212-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+213            android:exported="false" >
+213-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+214            <intent-filter>
+214-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+215                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+215-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+215-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+216                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+216-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+216-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+217            </intent-filter>
+218        </receiver>
+219        <receiver
+219-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+220            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+220-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+221            android:directBootAware="false"
+221-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+222            android:enabled="false"
+222-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+223            android:exported="false" >
+223-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+224            <intent-filter>
+224-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+225                <action android:name="android.intent.action.BATTERY_OKAY" />
+225-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+225-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+226                <action android:name="android.intent.action.BATTERY_LOW" />
+226-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+226-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+227            </intent-filter>
+228        </receiver>
+229        <receiver
+229-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+230            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+230-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+231            android:directBootAware="false"
+231-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+232            android:enabled="false"
+232-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+233            android:exported="false" >
+233-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+234            <intent-filter>
+234-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+235                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+235-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+235-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+236                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+236-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+236-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+237            </intent-filter>
+238        </receiver>
+239        <receiver
+239-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+240            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+240-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+241            android:directBootAware="false"
+241-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+242            android:enabled="false"
+242-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+243            android:exported="false" >
+243-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+244            <intent-filter>
+244-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+245                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+245-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+245-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+246            </intent-filter>
+247        </receiver>
+248        <receiver
+248-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+249            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+249-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+250            android:directBootAware="false"
+250-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+251            android:enabled="false"
+251-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+252            android:exported="false" >
+252-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+253            <intent-filter>
+253-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+254                <action android:name="android.intent.action.BOOT_COMPLETED" />
+254-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:17-79
+254-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:25-76
+255                <action android:name="android.intent.action.TIME_SET" />
+255-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+255-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+256                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+256-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+256-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+257            </intent-filter>
+258        </receiver>
+259        <receiver
+259-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+260            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+260-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+261            android:directBootAware="false"
+261-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+262            android:enabled="@bool/enable_system_alarm_service_default"
+262-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+263            android:exported="false" >
+263-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+264            <intent-filter>
+264-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+265                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+265-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+265-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+266            </intent-filter>
+267        </receiver>
+268        <receiver
+268-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+269            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+269-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+270            android:directBootAware="false"
+270-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+271            android:enabled="true"
+271-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+272            android:exported="true"
+272-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+273            android:permission="android.permission.DUMP" >
+273-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+274            <intent-filter>
+274-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+275                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+275-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+275-->[androidx.work:work-runtime:2.7.1] /Users/mathewtorres/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+276            </intent-filter>
+277        </receiver>
 278
-279</manifest>
+279        <service
+279-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+280            android:name="androidx.room.MultiInstanceInvalidationService"
+280-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+281            android:directBootAware="true"
+281-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+282            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+282-->[androidx.room:room-runtime:2.2.5] /Users/mathewtorres/.gradle/caches/transforms-3/c747649833e5d992ced321f763124585/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+283        <activity
+283-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:5-271
+284            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+284-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:15-102
+285            android:enabled="false"
+285-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:103-126
+286            android:exported="false"
+286-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:127-151
+287            android:launchMode="singleInstance"
+287-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:204-239
+288            android:process=":playcore_missing_splits_activity"
+288-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:152-203
+289            android:stateNotNeeded="true" />
+289-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:12:240-269
+290        <activity
+290-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:5-226
+291            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+291-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:15-95
+292            android:enabled="false"
+292-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:96-119
+293            android:exported="false"
+293-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:120-144
+294            android:stateNotNeeded="true"
+294-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:145-174
+295            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+295-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:13:175-224
+296        <service
+296-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:5-18:15
+297            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+297-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:14-95
+298            android:enabled="false"
+298-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:96-119
+299            android:exported="true" >
+299-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:16:120-143
+300            <meta-data
+300-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:17:7-108
+301                android:name="com.google.android.play.core.assetpacks.versionCode"
+301-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:17:18-84
+302                android:value="10901" />
+302-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:17:85-106
+303        </service>
+304        <service
+304-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:5-147
+305            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+305-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:14-96
+306            android:enabled="false"
+306-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:97-120
+307            android:exported="false" />
+307-->[com.google.android.play:core:1.9.1] /Users/mathewtorres/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:19:121-145
+308    </application>
+309
+310</manifest>

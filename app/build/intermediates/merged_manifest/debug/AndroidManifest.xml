@@ -10,12 +10,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-    <!-- Permission will be merged into the manifest of the hosting app. -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission will be merged into the manifest of the hosting app. -->
     <!-- Is required to launch foreground transfer service for targetSdkVersion 28+. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <queries>
         <intent>
@@ -28,6 +26,7 @@
         </intent>
     </queries>
 
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -46,6 +45,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.TaskmasterMDT" >
         <activity
+            android:name="com.taskmastermdt.activities.AnalyticsActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.taskmastermdt.activities.LocationActivity"
             android:exported="false" >
             <meta-data
@@ -54,21 +60,21 @@
         </activity>
         <activity
             android:name="com.taskmastermdt.activities.auth.VerifySignUpActivity"
-            android:exported="false" >
+            android:exported="true" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name="com.taskmastermdt.activities.auth.SignUpActivity"
-            android:exported="false" >
+            android:exported="true" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name="com.taskmastermdt.activities.auth.SignInActivity"
-            android:exported="false" >
+            android:exported="true" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -137,6 +143,31 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

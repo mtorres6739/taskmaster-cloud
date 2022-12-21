@@ -2654,6 +2654,7 @@ id SignUpActivityTextEditEmail
 id SignUpActivityTextEditPassword
 id TOP_END
 id TOP_START
+id TaskDetailBtnAnalytics
 id TaskDetailBtnBack
 id TaskDetailBtnLocation
 id TaskDetailImageViewTaskImage
@@ -3281,6 +3282,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_task
 layout activity_all_tasks
+layout activity_analytics
 layout activity_auth_sign_in
 layout activity_auth_sign_up
 layout activity_dev_menu
